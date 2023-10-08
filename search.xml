@@ -8,7 +8,7 @@
       <link href="//caad5a82.html"/>
       <url>//caad5a82.html</url>
       
-        <content type="html"><![CDATA[<p>hello world！</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="一-前期软件准备"><a href="#一-前期软件准备" class="headerlink" title="一.前期软件准备"></a>一.前期软件准备</h1><h2 id="vs-code安装"><a href="#vs-code安装" class="headerlink" title="vs code安装"></a>vs code安装</h2><p>Google搜索vs code</p><p><img src="/001.png" alt="image-20231008223011703"></p><p>选择第一个直接安装，我这里选择Windows系统</p><h2 id="jdk安装"><a href="#jdk安装" class="headerlink" title="jdk安装"></a>jdk安装</h2><p>Google搜jdk oracle</p><p><img src="/002.png" alt="002"></p><h1 id="第二部分-实现功能"><a href="#第二部分-实现功能" class="headerlink" title="第二部分 实现功能"></a>第二部分 实现功能</h1><h2 id="新建java文件，例如-na-java"><a href="#新建java文件，例如-na-java" class="headerlink" title="新建java文件，例如 na.java"></a>新建java文件，例如 na.java</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">na</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;hello java&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="终端输入下面代码"><a href="#终端输入下面代码" class="headerlink" title="终端输入下面代码"></a>终端输入下面代码</h2><p><code>javac na.java</code></p><p><code>java hello</code></p><p>即可得到输出</p><p>hello java</p>]]></content>
       
       
       <categories>
