@@ -14,7 +14,7 @@
   localSearch: {"path":"/search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
   translate: undefined,
   noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: undefined,
   copy: {
     success: '复制成功',
     error: '复制错误',
@@ -55,7 +55,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-10-10 11:21:59'
+  postUpdate: '2023-10-10 22:06:21'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -170,13 +170,15 @@
 防火墙和安全软件：有时，防火墙或安全软件可能会阻止 Git 与外部服务器建立连接。请检查你的防火墙设置，并确保 Git 被允许通过防火墙。
 代理设置：如果你在一个受限制的网络环境中，可能需要配置 Git 使用代理服务器。你可以使用以下命令配置 Git 使用代理：
 
-git config --global http.proxy http://your-proxy-server:portgit config --global https.proxy https://your-proxy-server:port
+git config --global http.proxy http://your-proxy-server:port
+git config --global https.proxy https://your-proxy-server:port
 
 将 “your-proxy-server” 和 “port” 替换为你的代理服务器地址和端口号。
 寻找电脑代理信息，点击设置，打开里面代理，可以看到代理具体信息，如：
 
 从中可以得到我的地址和端口，按照要求更改代码即可
-# 配置 Git 使用 HTTP 代理gi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/44276cb2.html" title="xiangce1">xiangce1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-09T14:32:41.000Z" title="发表于 2023-10-09 22:32:41">2023-10-09</time></span></div><div class="content">
+# 配置 Git 使用 HTTP 代理
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/44276cb2.html" title="xiangce1">xiangce1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-09T14:32:41.000Z" title="发表于 2023-10-09 22:32:41">2023-10-09</time></span></div><div class="content">
 
 
 
@@ -185,7 +187,11 @@ git config --global http.proxy http://your-proxy-server:portgit config --global 
 选择第一个直接安装，我这里选择Windows系统
 jdk安装Google搜jdk oracle
 
-第二部分 实现功能新建java文件，例如 na.javapublic class na &#123;    public static void main(String[] args) &#123;        System.out.println(&quot;hello java&quot;);    &#125;&#125;
+第二部分 实现功能新建java文件，例如 na.javapublic class na &#123;
+    public static void main(String[] args) &#123;
+        System.out.println(&quot;hello java&quot;);
+    &#125;
+&#125;
 
 终端输入下面代码javac na.java
 java hello
@@ -205,10 +211,19 @@ Data Types
 字元： char
 字串： String
 
-使用方法在vscode里面创建DataType ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/144c4b6.html" title="10.06调用chatglm模型">10.06调用chatglm模型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-06T09:10:48.000Z" title="发表于 2023-10-06 17:10:48">2023-10-06</time></span></div><div class="content">一.通过anaconda实现本地访问chatglm1.安装python库pip install gradio_client
+使用方法在vscode里面创建Data ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/144c4b6.html" title="10.06调用chatglm模型">10.06调用chatglm模型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-06T09:10:48.000Z" title="发表于 2023-10-06 17:10:48">2023-10-06</time></span></div><div class="content">一.通过anaconda实现本地访问chatglm1.安装python库pip install gradio_client
 2.在anaconda的jupyter实现代码from gradio_client import Client
 import json
-def call_internlm_cgat6b(input_):    &quot;&quot;&quot;    input_: 当前输入    return: 当前输出    &quot;&quot;&quot;    client = Client(&quot;https://modelscope.cn/api/vl/studio/AI-ModelScope/Internlm-chat-7b/gradio/&quot;)    result = client.predict(input_,fn_index=0)    with open(result[1],&#x27;r&#x27;,encoding=&#x27;utf-8&#x27;) as f:        data = json.load(f)    return ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/5a29c23b.html" title="1002">1002</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-02T10:16:19.000Z" title="发表于 2023-10-02 18:16:19">2023-10-02</time></span></div><div class="content">题目：算法题，使用你会的编程语言编程即可）小A和朋友们比身高，一共有 𝒏个朋友，每个朋友的身高是 𝒉，小A的身高为 𝑯，一共有 𝒎阶楼梯，第 𝒊阶楼梯的高度是 𝒔𝒊，第 𝒊个朋友会站在第 𝒑𝒊阶楼梯上，小A想知道，如果小A可以自由选择站在第几阶楼梯上，他最多可以比多少朋友高。 输入描述： 一行三个整数 𝑛，𝑚，𝐻，表示朋友的个数，楼梯的个数，小A的身高。 一行 𝑛个整数 ℎ𝑖，表示每个朋友的身高。 一行 𝑛个整数 𝑝𝑖，表示每个朋友站在第几阶楼梯上。 一行 𝑚个整数 𝑠𝑖，表示每个楼梯的高度。 1 ≤𝑛,𝑚≤10^5 1 ≤ 𝐻,ℎ𝑖,𝑠𝑖≤10^6 1≤𝑝𝑖≤𝑚 输出描述： 输出一个整数，表示小A可以比多少朋友高。[示例]输入：3 4 43 5 71 2 21 2 3 3输出：1说明：小A站在最高的楼梯上，高度为 4 + 3 &#x3D; 7。第一个朋友高度为 3+1&#x3D;4，第二个朋友高度为 5+2&#x3D;7，第三个朋友高度为 7+2 &#x3D;9。小A只能比第一个朋友高 
+def call_internlm_cgat6b(input_):
+    &quot;&quot;&quot;
+    input_: 当前输入
+    return: 当前输出
+    &quot;&quot;&quot;
+    client = Client(&quot;https://modelscope.cn/api/vl/studio/AI-ModelScope/Internlm-chat-7b/gradio/&quot;)
+    result = client.predict(input_,fn_index=0)
+    with open(result[1],&#39;r&#39;,encoding=&#39;utf-8&#39;) as f:
+        data = json.load(f)
+    r ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/5a29c23b.html" title="1002">1002</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-02T10:16:19.000Z" title="发表于 2023-10-02 18:16:19">2023-10-02</time></span></div><div class="content">题目：算法题，使用你会的编程语言编程即可）小A和朋友们比身高，一共有 𝒏个朋友，每个朋友的身高是 𝒉，小A的身高为 𝑯，一共有 𝒎阶楼梯，第 𝒊阶楼梯的高度是 𝒔𝒊，第 𝒊个朋友会站在第 𝒑𝒊阶楼梯上，小A想知道，如果小A可以自由选择站在第几阶楼梯上，他最多可以比多少朋友高。 输入描述： 一行三个整数 𝑛，𝑚，𝐻，表示朋友的个数，楼梯的个数，小A的身高。 一行 𝑛个整数 ℎ𝑖，表示每个朋友的身高。 一行 𝑛个整数 𝑝𝑖，表示每个朋友站在第几阶楼梯上。 一行 𝑚个整数 𝑠𝑖，表示每个楼梯的高度。 1 ≤𝑛,𝑚≤10^5 1 ≤ 𝐻,ℎ𝑖,𝑠𝑖≤10^6 1≤𝑝𝑖≤𝑚 输出描述： 输出一个整数，表示小A可以比多少朋友高。[示例]输入：3 4 43 5 71 2 21 2 3 3输出：1说明：小A站在最高的楼梯上，高度为 4 + 3 &#x3D; 7。第一个朋友高度为 3+1&#x3D;4，第二个朋友高度为 5+2&#x3D;7，第三个朋友高度为 7+2 &#x3D;9。小A只能比第一个朋友高 
 ﻿
 &#96;# 读取输入n, m, ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/b6557c71.html" title="chatgpt">chatgpt</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-27T11:55:25.000Z" title="发表于 2023-09-27 19:55:25">2023-09-27</time></span></div><div class="content">1.prompt工程什么是 Prompt 工程？
 Prompt 工程是创建提示或指导像 ChatGPT 这样的语言模型输出的过程。它允许用户控制模型的输出并
@@ -258,7 +273,10 @@ npm install hexo-deployer-git --save
 下面你需要打开根目录，然后在这个目录下找到站点配置文件_config.yml（如下图左）。并且打开这个文件，进行编辑。
 
 在站点配置文件内（如上图右）找到&#x3D;&#x3D;deploy&#x3D;&#x3D;这一行代码，按照以下的格式修改即可。
-deploy:  type: git  repo: git@github.com:damon-ldl/damon-ldl.github.io.git   branch: master
+deploy:
+  type: git
+  repo: git@github.com:damon-ldl/damon-ldl.github.io.git 
+  branch: master
 
 
 deploy: 部署的意思，一个关键词
@@ -267,15 +285,20 @@ type：部署的类型，这里选择的是git，就是上面我们已经安装�
 
 repo：仓库的意思，我们所有的本地文件都要上传到这里！我们要在github上面申请自己的账号，建造自己的仓库~（具体怎么做见后文！）
 
-branch：仓库的分支的意思，一个仓库里面可以有多个分支，就像是一个大院里面有 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2339e0f4.html" title="markdown学习日志">markdown学习日志</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-26T00:57:17.000Z" title="发表于 2023-09-26 08:57:17">2023-09-26</time></span></div><div class="content">
+branch：仓库的分支的意思，一个仓库里面可以有多个分支，就像是一个大院 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2339e0f4.html" title="markdown学习日志">markdown学习日志</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-26T00:57:17.000Z" title="发表于 2023-09-26 08:57:17">2023-09-26</time></span></div><div class="content">
 标题
 
  方式一：这个标题手敲就在文本前边敲#号，#和文本中间需又空格隔开。
  方式二：快捷键，Ctrl+(1~6)。
  方式三：在Typora文本编辑区右键鼠标，选择段落也可以插入标题。不止标题，还有其他样式设置
  方式四：在编辑器中左上角的菜单栏选择段落去插入标题。不止标题，还有其他样式设置
-&#x27;&#x27;&#x27;第一种方式&#x27;&#x27;&#x27;   # 一级标题   快捷键Ctrl + 1   # 二级标题   快捷键Ctrl + 2   # 三级标题   快捷键Ctrl + 3&#x27;&#x27;&#x27;第二种方式&#x27;&#x27;&#x27;  #警号（#）数加空格来决定标题大小
+&#39;&#39;&#39;第一种方式&#39;&#39;&#39;
+   # 一级标题   快捷键Ctrl + 1
+   # 二级标题   快捷键Ctrl + 2
+   # 三级标题   快捷键Ctrl + 3
 
+&#39;&#39;&#39;第二种方式&#39;&#39;&#39;
+  #警号（#）数加空格来决定标题大小
 
 
 
@@ -318,7 +341,7 @@ ctrl+6
 
 
 标题展示如下：
-一级标题二级 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/4a17b156.html" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-24T03:24:54.600Z" title="发表于 2023-09-24 11:24:54">2023-09-24</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+一级标题二级标题三级标题四 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/4a17b156.html" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-24T03:24:54.600Z" title="发表于 2023-09-24 11:24:54">2023-09-24</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
 Quick StartCreate a new post$ hexo new &quot;My New Post&quot;
 
 More info: Writing
@@ -338,7 +361,7 @@ More info: Deployment
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/"><span class="card-category-list-name">学习资料</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E7%9B%B8%E5%86%8C/" style="font-size: 1.1em; color: #999">相册</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E9%94%99%E8%AF%AF/" style="font-size: 1.1em; color: #999">网络连接错误</a> <a href="/tags/java%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">java学习</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">5</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-09-24T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">10.4k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-10-10T03:21:58.937Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By damon-ldl</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E9%94%99%E8%AF%AF/" style="font-size: 1.1em; color: #999">网络连接错误</a> <a href="/tags/java%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">java学习</a> <a href="/tags/%E7%9B%B8%E5%86%8C/" style="font-size: 1.1em; color: #999">相册</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">5</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-09-24T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">10.4k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-10-10T14:06:21.103Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By damon-ldl</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
   init: (str) => {
     window.typed = new Typed('#subtitle', Object.assign({
       strings: str,
@@ -367,7 +390,7 @@ More info: Deployment
     document.getElementById("subtitle").textContent = "今日事;今日毕"
   }
 }
-typedJSFn.run(subtitleType)</script></div><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>#樱花<script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div>
+typedJSFn.run(subtitleType)</script></div><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>#樱花<canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div>
         <style>
             [bg-lazy] {
                 background-image: none !important;
