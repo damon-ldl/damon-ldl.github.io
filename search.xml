@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>linux</title>
+      <link href="//9211474f.html"/>
+      <url>//9211474f.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python学习</title>
       <link href="//fbaff1b6.html"/>
       <url>//fbaff1b6.html</url>
@@ -29,17 +42,23 @@
     
     
     <entry>
-      <title>errors</title>
+      <title>hexo文章标签无法显示</title>
       <link href="//3c51531d.html"/>
       <url>//3c51531d.html</url>
       
         <content type="html"><![CDATA[<h1 id="hexo-butterfly里面，文章目录和标签无法显示"><a href="#hexo-butterfly里面，文章目录和标签无法显示" class="headerlink" title="hexo+butterfly里面，文章目录和标签无法显示"></a>hexo+butterfly里面，文章目录和标签无法显示</h1><p>本地在网站根目录执行程序</p><pre><code>hexo new page categorieshexo new page tags</code></pre><h2 id="之后可以打开网页但无内容"><a href="#之后可以打开网页但无内容" class="headerlink" title="之后可以打开网页但无内容"></a>之后可以打开网页但无内容</h2><h1 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h1><p> 找到运行 <code>hexo new page categories</code>之后本地文件Hexo\source 目录中会生成一个 categories 文件夹，文件夹内有一个 index.md 文件，打开此文件，将其中的 <code>type</code> 修改为 <code>categories</code> 即可。<br> 如</p><pre><code>title: 分类date: 2023-10-11 20:26:34type: &quot;categories&quot;</code></pre><p>即可达到要求</p><pre><code>title: tagsdate: 2023-10-11 20:26:34type: &quot;tags&quot;</code></pre><p>同理可以设置标签</p><p>为文章设置目录可参考：</p><pre><code>---title: 这里是文章的标题date: 这里是发表时间，如：2023-10-11 08:15:16description: 这里填写摘要。categories:- 分类- 子分类tags:- 标签1- 标签2---</code></pre><p>这样就可以设置标签和分类并显示了。</p>]]></content>
       
       
+      <categories>
+          
+          <category> errors </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> 错误+解决方案 </tag>
+            <tag> debug </tag>
             
         </tags>
       
@@ -55,10 +74,16 @@
         <content type="html"><![CDATA[<h1 id="错误类型"><a href="#错误类型" class="headerlink" title="错误类型"></a>错误类型</h1><p>**fatal: unable to access ‘**无法连接互联网</p><p>需要设置相关代理信息解决问题</p><h1 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h1><ol><li><strong>检查网络连接</strong>：确保你的计算机正常连接到互联网。尝试在浏览器中打开其他网站，以确保你的网络连接正常。</li><li><strong>防火墙和安全软件</strong>：有时，防火墙或安全软件可能会阻止 Git 与外部服务器建立连接。请检查你的防火墙设置，并确保 Git 被允许通过防火墙。</li><li><strong>代理设置</strong>：如果你在一个受限制的网络环境中，可能需要配置 Git 使用代理服务器。你可以使用以下命令配置 Git 使用代理：</li></ol><pre><code>git config --global http.proxy http://your-proxy-server:portgit config --global https.proxy https://your-proxy-server:port</code></pre><p>将 “your-proxy-server” 和 “port” 替换为你的代理服务器地址和端口号。</p><p>寻找电脑代理信息，点击<strong>设置</strong>，打开里面<strong>代理</strong>，可以看到代理具体信息，如：</p><p><img src="/b9040b7b/001.png" alt="image-20231010111358051"></p><p>从中可以得到我的地址和端口，按照要求更改代码即可</p><pre><code># 配置 Git 使用 HTTP 代理git config --global http.proxy http://127.0.0.1:7896</code></pre><p>配置完成后即可正常访问</p>]]></content>
       
       
+      <categories>
+          
+          <category> errors </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> 错误+解决方案 </tag>
+            <tag> debug </tag>
             
         </tags>
       
@@ -120,16 +145,14 @@
       
       <categories>
           
-          <category> python学习 </category>
-          
-          <category> anaconda实现本地访问chatglm模型 </category>
+          <category> python </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> python </tag>
+            <tag> chatglm </tag>
             
         </tags>
       
@@ -157,13 +180,27 @@
     
     
     <entry>
-      <title>chatgpt</title>
+      <title>chatgpt的提示工程</title>
       <link href="//b6557c71.html"/>
       <url>//b6557c71.html</url>
       
-        <content type="html"><![CDATA[<h1 id="1-prompt工程"><a href="#1-prompt工程" class="headerlink" title="1.prompt工程"></a>1.prompt工程</h1><p>什么是 Prompt 工程？</p><p>Prompt 工程是创建提示或指导像 ChatGPT 这样的语言模型输出的过程。它允许用户控制模型的输出并</p><p>生成符合其特定需求的文本。</p><p>ChatGPT 是一种先进的语言模型，能够生成类似于人类的文本。它建立在 Transformer 架构上，可以处</p><p>理大量数据并生成高质量的文本。</p><p>然而，为了从 ChatGPT 中获得最佳结果，重要的是要了解如何正确地提示模型。 提示可以让用户控制</p><p>模型的输出并生成相关、准确和高质量的文本。 在使用 ChatGPT 时，了解它的能力和限制非常重要。</p><p>该模型能够生成类似于人类的文本，但如果没有适当的指导，它可能无法始终产生期望的输出。</p><p>这就是 Prompt 工程的作用，通过提供清晰而具体的指令，您可以引导模型的输出并确保其相关。</p><p><strong>Prompt 公式是提示的特定格式，通常由三个主要元素组成：</strong></p><p>• 任务：对提示要求模型生成的内容进行清晰而简洁的陈述。</p><p>• 指令：在生成文本时模型应遵循的指令。</p><p>• 角色：模型在生成文本时应扮演的角色。</p><h1 id="2-提示原则"><a href="#2-提示原则" class="headerlink" title="2.提示原则"></a>2.提示原则</h1><p>如何去使用 Prompt，以充分发挥 LLM 的性能？首先我们需要知道设计 Prompt 的原则，它们是每一个</p><p>开发者设计 Prompt 所必须知道的基础概念。设计高效 Prompt 的两个关键原则：<strong>编写清</strong></p><p><strong>晰、具体的指令</strong>和<strong>给予模型充足思考时间</strong>。掌握这两点，对创建可靠的语言模型交互尤为重要。</p><p>首先，Prompt 需要清晰明确地表达需求，提供充足上下文，使语言模型准确理解我们的意图，就像向一</p><p>个外星人详细解释人类世界一样。过于简略的 Prompt 往往使模型难以把握所要完成的具体任务。</p><p>其次，让语言模型有充足时间推理也极为关键。就像人类解题一样，匆忙得出的结论多有失误。因此</p><p>Prompt 应加入逐步推理的要求，给模型留出充分思考时间，这样生成的结果才更准确可靠。</p><p>如果 Prompt 在这两点上都作了优化，语言模型就能够尽可能发挥潜力，完成复杂的推理和生成任务。</p><p>掌握这些 Prompt 设计原则，是开发者取得语言模型应用成功的重要一步。</p><h2 id="2-1原则一-使用分隔符清晰地表示输入的不同部分"><a href="#2-1原则一-使用分隔符清晰地表示输入的不同部分" class="headerlink" title="2.1原则一 使用分隔符清晰地表示输入的不同部分"></a>2.1原则一 <strong>使用分隔符清晰地表示输入的不同部分</strong></h2><p>在编写 Prompt 时，我们可以使用各种标点符号作为“分隔符”，将不同的文本部分区分开来。</p><p>分隔符就像是 Prompt 中的墙，将不同的指令、上下文、输入隔开，避免意外的混淆。你可以选择用</p><p>`&#96;&#96;，”””，&lt; &gt;，<tag> </tag>，: 等做分隔符，只要能明确起到隔断作用即可。</p><p>使用分隔符尤其重要的是可以防止 <strong>提示词注入（<strong><strong>Prompt Rejection</strong></strong>）</strong>。什么是提示词注入？就是用户</p><p>输入的文本可能包含与你的预设 Prompt 相冲突的内容，如果不加分隔，这些输入就可能“注入”并操纵语</p><p>言模型，导致模型产生毫无关联的乱七八糟的输出。</p><h2 id="2-2寻求结构化的输出"><a href="#2-2寻求结构化的输出" class="headerlink" title="2.2寻求结构化的输出"></a>2.2<strong>寻求结构化的输出</strong></h2><p>有时候我们需要语言模型给我们一些<strong>结构化的输出</strong>，而不仅仅是连续的文本。</p><p>什么是结构化输出呢？就是按照某种格式组织的内容，例如JSON、HTML等。这种输出非常适合在代码</p><p>中进一步解析和处理。例如，您可以在 Python 中将其读入字典或列表中。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="prompt工程"><a href="#prompt工程" class="headerlink" title="prompt工程"></a>prompt工程</h1><h2 id="什么是-Prompt-工程？"><a href="#什么是-Prompt-工程？" class="headerlink" title="什么是 Prompt 工程？"></a>什么是 Prompt 工程？</h2><p>Prompt 工程是创建提示或指导像 ChatGPT 这样的语言模型输出的过程。它允许用户控制模型的输出并生成符合其特定需求的文本。</p><p>ChatGPT 是一种先进的语言模型，能够生成类似于人类的文本。它建立在 Transformer 架构上，可以处理大量数据并生成高质量的文本。</p><p>然而，为了从 ChatGPT 中获得最佳结果，重要的是要了解如何正确地提示模型。 提示可以让用户控制模型的输出并生成相关、准确和高质量的文本。 在使用 ChatGPT 时，了解它的能力和限制非常重要。</p><p>该模型能够生成类似于人类的文本，但如果没有适当的指导，它可能无法始终产生期望的输出。</p><p>这就是 Prompt 工程的作用，通过提供清晰而具体的指令，您可以引导模型的输出并确保其相关。</p><p><strong>Prompt 公式是提示的特定格式，通常由三个主要元素组成：</strong></p><blockquote><ul><li>任务：对提示要求模型生成的内容进行清晰而简洁的陈述。</li></ul></blockquote><blockquote><ul><li>指令：在生成文本时模型应遵循的指令。</li></ul></blockquote><blockquote><ul><li>角色：模型在生成文本时应扮演的角色。</li></ul></blockquote><h1 id="提示原则"><a href="#提示原则" class="headerlink" title="提示原则"></a>提示原则</h1><p>如何去使用 Prompt，以充分发挥 LLM 的性能？首先我们需要知道设计 Prompt 的原则，它们是每一个</p><p>开发者设计 Prompt 所必须知道的基础概念。设计高效 Prompt 的两个关键原则：<strong>编写清晰、具体的指令</strong>和<strong>给予模型充足思考时间</strong>。掌握这两点，对创建可靠的语言模型交互尤为重要。</p><p>首先，Prompt 需要清晰明确地表达需求，提供充足上下文，使语言模型准确理解我们的意图，就像向一个外星人详细解释人类世界一样。过于简略的 Prompt 往往使模型难以把握所要完成的具体任务。</p><p>其次，让语言模型有充足时间推理也极为关键。就像人类解题一样，匆忙得出的结论多有失误。因此Prompt 应加入逐步推理的要求，给模型留出充分思考时间，这样生成的结果才更准确可靠。</p><p>如果 Prompt 在这两点上都作了优化，语言模型就能够尽可能发挥潜力，完成复杂的推理和生成任务。</p><p>掌握这些 Prompt 设计原则，是开发者取得语言模型应用成功的重要一步。</p><h2 id="原则一-编写清晰、具体的指令"><a href="#原则一-编写清晰、具体的指令" class="headerlink" title="原则一 编写清晰、具体的指令"></a>原则一 编写清晰、具体的指令</h2><h3 id="使用分隔符清晰地表示输入的不同部分"><a href="#使用分隔符清晰地表示输入的不同部分" class="headerlink" title="使用分隔符清晰地表示输入的不同部分"></a>使用分隔符清晰地表示输入的不同部分</h3><p>在编写 Prompt 时，我们可以使用各种标点符号作为“分隔符”，将不同的文本部分区分开来。</p><p>分隔符就像是 Prompt 中的墙，将不同的指令、上下文、输入隔开，避免意外的混淆。你可以选择用</p><p><code>\```，&quot;&quot;&quot;，&lt; &gt;，&lt;tag&gt; &lt;/tag&gt;，: 等做分隔符，只要能明确起到隔断作用即可。</code></p><p>使用分隔符尤其重要的是可以防止 <strong>提示词注入（<strong><strong>Prompt Rejection</strong></strong>）</strong>。什么是提示词注入？就是用户</p><p>输入的文本可能包含与你的预设 Prompt 相冲突的内容，如果不加分隔，这些输入就可能“注入”并操纵语</p><p>言模型，导致模型产生毫无关联的乱七八糟的输出。</p><h3 id="增加背景信息（context）"><a href="#增加背景信息（context）" class="headerlink" title="增加背景信息（context）"></a>增加背景信息（context）</h3><blockquote><p>包含外部信息或者额外的上下文信息，引导语言模型更好的响应。</p></blockquote><p>&#x3D;&#x3D;如：我是一个小学生，你是苏格拉底&#x3D;&#x3D;</p><p><code>tips</code>:角色扮演，给模型一个角色让他按照角色进行输出</p><h2 id="原则二-寻求结构化的输出"><a href="#原则二-寻求结构化的输出" class="headerlink" title="原则二 寻求结构化的输出"></a>原则二 寻求结构化的输出</h2><p>有时候我们需要语言模型给我们一些<strong>结构化的输出</strong>，而不仅仅是连续的文本。</p><p>什么是结构化输出呢？就是按照某种格式组织的内容，例如JSON、HTML等。这种输出非常适合在代码</p><p>中进一步解析和处理。例如，您可以在 Python 中将其读入字典或列表中。</p><p>&#x3D;&#x3D;如：50字，4句话；以json，html格式输出，或者直接给出输出的结构样式，让模型按照该结构输出&#x3D;&#x3D;</p>]]></content>
       
       
+      <categories>
+          
+          <category> 学习资料 </category>
+          
+          <category> llm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> prompt </tag>
+            
+        </tags>
       
     </entry>
     
@@ -187,9 +224,15 @@
       <link href="//52e7e92.html"/>
       <url>//52e7e92.html</url>
       
-        <content type="html"><![CDATA[<h1 id="部署hexo博客"><a href="#部署hexo博客" class="headerlink" title="部署hexo博客"></a>部署hexo博客</h1><p>首先需要安装<code>hexo-deployer-git</code>插件，这样我们才能把生成的<code>public</code>文件夹部署到Github或者其他代码托管平台。</p><pre><code class="bash">npm install hexo-deployer-git --save</code></pre><p>下面你需要打开根目录，然后在这个目录下找到站点配置文件<code>_config.yml</code>（如下图左）。并且打开这个文件，进行编辑。</p><p><img src="/52e7e92/image-1.png" alt="2"></p><p>在站点配置文件内（如上图右）找到&#x3D;&#x3D;deploy&#x3D;&#x3D;这一行代码，按照以下的格式修改即可。</p><pre><code class="bash">deploy:  type: git  repo: git@github.com:damon-ldl/damon-ldl.github.io.git   branch: master</code></pre><ul><li><p>deploy: 部署的意思，一个关键词</p></li><li><p>type：部署的类型，这里选择的是git，就是上面我们已经安装的那个</p></li><li><p>repo：仓库的意思，我们所有的本地文件都要上传到这里！我们要在github上面申请自己的账号，建造自己的仓库~（具体怎么做见后文！）</p></li><li><p>branch：仓库的分支的意思，一个仓库里面可以有多个分支，就像是一个大院里面有很多间厢房一样。具体的含义后面解释。</p></li></ul><h1 id="hexo相关命令"><a href="#hexo相关命令" class="headerlink" title="hexo相关命令"></a>hexo相关命令</h1><h4 id="hexo-init"><a href="#hexo-init" class="headerlink" title="hexo init"></a>hexo init</h4><pre><code>$ hexo init </code></pre><p>命令用于初始化一个本地文件夹为网站的根目录</p><h4 id="hexo-new"><a href="#hexo-new" class="headerlink" title="hexo new"></a>hexo new</h4><pre><code>$ hexo new title 新建一篇文章</code></pre><h4 id="hexo-generate"><a href="#hexo-generate" class="headerlink" title="hexo generate"></a>hexo generate</h4><pre><code>$ hexo generate 可以简写成 hexo g该命令用于生成静态文件</code></pre><h4 id="hexo-server"><a href="#hexo-server" class="headerlink" title="hexo server"></a>hexo server</h4><pre><code>$ hexo server 命令用于启动本地服务器，一般可以简写成 hexo s可以加一些参数-p    选项，指定服务器端口，默认为 4000-i    选项，指定服务器 IP 地址，默认为 0.0.0.0-s    选项，静态模式 ，仅提供 public 文件夹中的文件并禁用文件监视</code></pre><h4 id="hexo-deploy"><a href="#hexo-deploy" class="headerlink" title="hexo deploy"></a>hexo deploy</h4><pre><code>$ hexo deploy 命令用于部署网站，一般可以简写成 hexo d</code></pre><h4 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h4><pre><code>$ hexo clean 命令用于清理缓存文件，是一个比较常用的命令</code></pre><h4 id="hexo-–safe"><a href="#hexo-–safe" class="headerlink" title="hexo –safe"></a>hexo –safe</h4><pre><code>$ hexo --safe 表示安全模式，用于禁用加载插件和脚本</code></pre><h4 id="hexo-–debug"><a href="#hexo-–debug" class="headerlink" title="hexo –debug"></a>hexo –debug</h4><pre><code>$ hexo --debug 表示调试模式，用于将消息详细记录到终端和 debug.log 文件</code></pre><h4 id="hexo-–silent"><a href="#hexo-–silent" class="headerlink" title="hexo –silent"></a>hexo –silent</h4><pre><code>$ hexo --silent  表示静默模式，用于静默输出到终端</code></pre><h1 id="一键部署"><a href="#一键部署" class="headerlink" title="一键部署"></a>一键部署</h1><pre><code>npx hexo cl &amp;&amp;npx hexo g &amp;&amp;npx hexo s</code></pre><ul><li><code>hexo cl</code> 是 <code>hexo clean</code>的简写。意思是清除本地的缓存，实际上就是把博客文件夹下的<code>public</code>文件夹删除掉了。这个<code>public</code>是基于本地的文件生成的、用于上传到仓库或者其他网站服务器上的文件夹，可以理解为本地文件上网的中转站、交通工具，删掉了也不影响本地的内容。</li><li><code>hexo g</code> 是<code>hexo generate</code>的简写，意思是生成public文件夹。</li><li>hexo s 命令用于启动本地服务器</li></ul><pre><code>npx hexo d</code></pre><ul><li><code>hexo d</code>是<code>hexo deploy</code>的简写，意思是将生成的public文件夹部署到网上，我们这里是部署到github上面。</li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="部署hexo博客"><a href="#部署hexo博客" class="headerlink" title="部署hexo博客"></a>部署hexo博客</h1><p>首先需要安装<code>hexo-deployer-git</code>插件，这样我们才能把生成的<code>public</code>文件夹部署到Github或者其他代码托管平台。</p><pre><code class="bash">npm install hexo-deployer-git --save</code></pre><p>下面你需要打开根目录，然后在这个目录下找到站点配置文件<code>_config.yml</code>（如下图左）。并且打开这个文件，进行编辑。</p><p><img src="/52e7e92/image-1.png" alt="2"></p><p>在站点配置文件内（如上图右）找到&#x3D;&#x3D;deploy&#x3D;&#x3D;这一行代码，按照以下的格式修改即可。</p><pre><code class="bash">deploy:  type: git  repo: git@github.com:damon-ldl/damon-ldl.github.io.git   branch: master</code></pre><ul><li><p>deploy: 部署的意思，一个关键词</p></li><li><p>type：部署的类型，这里选择的是git，就是上面我们已经安装的那个</p></li><li><p>repo：仓库的意思，我们所有的本地文件都要上传到这里！我们要在github上面申请自己的账号，建造自己的仓库~（具体怎么做见后文！）</p></li><li><p>branch：仓库的分支的意思，一个仓库里面可以有多个分支，就像是一个大院里面有很多间厢房一样。具体的含义后面解释。</p></li></ul><h1 id="hexo相关命令"><a href="#hexo相关命令" class="headerlink" title="hexo相关命令"></a>hexo相关命令</h1><h4 id="hexo-init"><a href="#hexo-init" class="headerlink" title="hexo init"></a>hexo init</h4><pre><code>$ hexo init </code></pre><p>命令用于初始化一个本地文件夹为网站的根目录</p><h4 id="hexo-new"><a href="#hexo-new" class="headerlink" title="hexo new"></a>hexo new</h4><pre><code>$ hexo new title 新建一篇文章</code></pre><h4 id="hexo-generate"><a href="#hexo-generate" class="headerlink" title="hexo generate"></a>hexo generate</h4><pre><code>$ hexo generate 可以简写成 hexo g该命令用于生成静态文件</code></pre><h4 id="hexo-server"><a href="#hexo-server" class="headerlink" title="hexo server"></a>hexo server</h4><pre><code>$ hexo server 命令用于启动本地服务器，一般可以简写成 hexo s可以加一些参数-p    选项，指定服务器端口，默认为 4000-i    选项，指定服务器 IP 地址，默认为 0.0.0.0-s    选项，静态模式 ，仅提供 public 文件夹中的文件并禁用文件监视</code></pre><h4 id="hexo-deploy"><a href="#hexo-deploy" class="headerlink" title="hexo deploy"></a>hexo deploy</h4><pre><code>$ hexo deploy 命令用于部署网站，一般可以简写成 hexo d</code></pre><h4 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h4><pre><code>$ hexo clean 命令用于清理缓存文件，是一个比较常用的命令</code></pre><h4 id="hexo-–safe"><a href="#hexo-–safe" class="headerlink" title="hexo –safe"></a>hexo –safe</h4><pre><code>$ hexo --safe 表示安全模式，用于禁用加载插件和脚本</code></pre><h4 id="hexo-–debug"><a href="#hexo-–debug" class="headerlink" title="hexo –debug"></a>hexo –debug</h4><pre><code>$ hexo --debug 表示调试模式，用于将消息详细记录到终端和 debug.log 文件</code></pre><h4 id="hexo-–silent"><a href="#hexo-–silent" class="headerlink" title="hexo –silent"></a>hexo –silent</h4><pre><code>$ hexo --silent  表示静默模式，用于静默输出到终端</code></pre><h1 id="一键部署"><a href="#一键部署" class="headerlink" title="一键部署"></a>一键部署</h1><pre><code>npx hexo cl &amp;&amp;npx hexo g &amp;&amp;npx hexo s</code></pre><ul><li><code>hexo cl</code> 是 <code>hexo clean</code>的简写。意思是清除本地的缓存，实际上就是把博客文件夹下的<code>public</code>文件夹删除掉了。这个<code>public</code>是基于本地的文件生成的、用于上传到仓库或者其他网站服务器上的文件夹，可以理解为本地文件上网的中转站、交通工具，删掉了也不影响本地的内容。</li><li><code>hexo g</code> 是<code>hexo generate</code>的简写，意思是生成public文件夹。</li><li>hexo s 命令用于启动本地服务器</li></ul><pre><code>npx hexo d</code></pre><ul><li><code>hexo d</code>是<code>hexo deploy</code>的简写，意思是将生成的public文件夹部署到网上，我们这里是部署到github上面。</li></ul><h1 id="部署常见错误"><a href="#部署常见错误" class="headerlink" title="部署常见错误"></a>部署常见错误</h1><h2 id="文章标签页设置"><a href="#文章标签页设置" class="headerlink" title="文章标签页设置"></a>文章标签页设置</h2><hr><pre><code>title: 【必需】文章标题date: 【必需】文章创建日期updated: 【可选】文章更新日期tags: 【可选】文章标签categories: 【可选】文章分类keywords: 【可选】文章关键字description: 【可选】文章描述top_img: 【可选】文章顶部图片comments： 【可选】显示文章评论模块 (默认 true)cover: 【可选】文章缩略图 (如果没有设置 top_img, 文章页顶部将显示缩略图，可设为 false / 图片地址 / 留空)toc: 【可选】显示文章 TOC (默认为设置中 toc 的 enable 配置)toc_number: 【可选】显示 toc_number (默认为设置中 toc 的 number 配置)auto_open: 【可选】是否自动打开 TOC (默认为设置中 toc 的 auto_open 配置)copyright: 【可选】显示文章版权模块 (默认为设置中 post_copyright 的 enable 配置)copyright_author: 【可选】文章版权模块的文章作者copyright_author_href: 【可选】文章版权模块的文章作者链接copyright_url: 【可选】文章版权模块的文章连结链接copyright_info: 【可选】文章版权模块的版权声明文字mathjax: 【可选】显示 mathjax (当设置 mathjax 的 per_page: false 时，才需要配置，默认 false)katex: 【可选】显示 katex (当设置 katex 的 per_page: false 时，才需要配置，默认 false)aplayer: 【可选】在需要的页面加载 aplayer 的 js 和 css, 请参考文章下面的音乐 配置highlight_shrink：【可选】配置代码框是否展开 (true/false)(默认为设置中 highlight_shrink 的配置)</code></pre><p>文章标签页设计中一定要注意“：”后面需要<code>空格</code>！！！！</p>]]></content>
       
       
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
