@@ -244,8 +244,8 @@ wind blow, maple leaf, cloudy sky, dusty, forest, plant, flower
 反面提示词：
 EasyNegative, (worst quality:2), (low quality:2), (normal quality:2), lowres, normal quality, ((monochrome)),((grayscale)),skin spots, acnes, skin blemishes, age spot, (outdoor:1.6), (ugly:1.331), (duplicate:1.331), (morbid:1.21), (mutilated:1.21)(tranny:1.331), mutated hands, (poorly drawn hands:1.5), blurry, (bad anatomy:1.21), (bad proportions:1.331), extra limbs, (disfigured:1.33), (more than 2 nipples:1.331), (missing arms:1.33), (extra legs:1.331), (fused fingers:1.61051),(too many fingers:1.61051), (unclear eyes:1.331), lowers, bad hands, missing fingers, extra digit, (futa:1.1), bad hands, missing fingers, (((extra arms and legs))), extra hair, (2girls:2.0), signature, watermark, username, atist name
 </code></pre>
-<p><img src="/img/loading.gif" data-original="/001.png" alt="00000-446021579"></p>
-<p><img src="/img/loading.gif" data-original="/002.png" alt="00003-2149389212"></p>
+<p><img src="/img/loading.gif" data-original="/d0da01c/001.png" alt="00000-446021579"></p>
+<p><img src="/img/loading.gif" data-original="/d0da01c/002.png" alt="00003-2149389212"></p>
 <p>不同的提示词分别向AI描绘了画面风格、人物体貌、服饰特点、场景内容和一些额外的修饰性元素。别看这么多的字，其实，很多关于风格和画质把控的提示词是固定的。</p>
 <p>虽然说提示词并非越多越好，但很多时候写多点，比少写点出来的效果肯定要更好，且在特定需求上控制会更为精确。所以，要想让AI按照我们的需要去产图，提示词到底该怎么写呢？放轻松，其实写提示词的过程非常自由的，无论你写什么，AI都可以给你画，在StableDiffusion中，可以输入提示词的区域就是左上方这两个文本框了，之前也提到了，它被分为了上下两部分，上面是正向的提示词，下面是反向的提示词。虽然自由，但提示词有一些基本的语法规则，是你应该掌握的。</p>
 <p>首先，提示词需要英文书写，所以，如果你英语水平足够好，可以用英语组织你的描述语言，如果不好，可以求助翻译软件。</p>
@@ -257,13 +257,13 @@ EasyNegative, (worst quality:2), (low quality:2), (normal quality:2), lowres, no
 shining on body,
 </code></pre>
 <p>在输入这些东西以后，点击“Generate”，生成图画，出来的图片是这样的：</p>
-<p><img src="/img/loading.gif" data-original="/003.png" alt="00006-1663017696"></p>
+<p><img src="/img/loading.gif" data-original="/d0da01c/003.png" alt="00006-1663017696"></p>
 <p>它有可能符合你的需要，也有可能变得奇奇怪怪。AI绘画是具有一定的随机性的，点多几次生成，每次生成出来的东西都会不太一样。之前，也有人把AI绘画比喻为“抽卡”，想出好的图片，得靠运气来抽。“一个女孩在林中漫步”，这其实只是一个非常概括的描述，这个女孩长什么样子、森林里有什么东西，时间是早上还是晚上、天气如何，这些东西，AI都不知道，你的提示词太过于笼统，那它就只能瞎蒙抽卡了。但也别担心，提示词很多时候不是一下子就写好的，而是现有一个雏形，再慢慢细化、补充和微调的。</p>
 <pre><code>1girl, walking, forest, path, sun, sunshine, shining on body, looking at viewer, close-up, upper body,
 (masterpiece:1,2), best quality, masterpiece, highres, original, extremely detailed wallpaper, perfect lighting, (extremely detailed CG:1.2), drawing, paintbrush
 </code></pre>
 <p>还可以加一些的提示词，更多的就是在一些具体的方面，对这个画面去做控制。</p>
-<p><img src="/img/loading.gif" data-original="/004.png" alt="00007-2658747475"></p>
+<p><img src="/img/loading.gif" data-original="/d0da01c/004.png" alt="00007-2658747475"></p>
 <h2 id="2、提示词分类和书写方式"><a href="#2、提示词分类和书写方式" class="headerlink" title="2、提示词分类和书写方式"></a>2、提示词分类和书写方式</h2><p>要加些什么呢？提示词有很多不同的分类。这里，把提示词概括成如下几个大类。</p>
 <h3 id="1-人物及主题特征"><a href="#1-人物及主题特征" class="headerlink" title="(1) 人物及主题特征"></a>(1) 人物及主题特征</h3><ul>
 <li>服饰穿搭：white dress</li>
@@ -276,7 +276,7 @@ shining on body,
 <pre><code>1girl, walking, forest, path, sun, sunshine, shining on body, 
 white dress, blonde hair, long hair, smiling, stretching arms, hands up, beautiful, happy,
 </code></pre>
-<p><img src="/img/loading.gif" data-original="/005.png" alt="00000-1611124299"></p>
+<p><img src="/img/loading.gif" data-original="/d0da01c/005.png" alt="00000-1611124299"></p>
 <h3 id="2-场景特征"><a href="#2-场景特征" class="headerlink" title="(2) 场景特征"></a>(2) 场景特征</h3><ul>
 <li>室内、室外：indoor&#x2F;outdoor</li>
 <li>大场景：forest, city, street</li>
@@ -382,11 +382,11 @@ exaggerated body proportions, greasy skin, realistic and delicate facial feature
 </ul>
 <p> 而如果你想削弱某个提示词的影响，就可以赋予它一个小于 1 的权重数值，或者用方括号<code>[]</code>, 会把原来的权重削弱成原来的 0.9 倍。调节权重的时候，也要注意一件事情，就是尽量避免个别词条的权重太高，我体验的安全范围在 1 上下 0.5 左右。当你赋予一个词条2左右甚至更高的数值时，他就容易扭曲画面的内容。这个时候我们通常要改换思路。通过更多类型的词条来协助增强它的效应。</p>
 <p><strong>总结一下：</strong></p>
-<p><img src="/img/loading.gif" data-original="/006.png" alt="image-20230801063233335"></p>
+<p><img src="/img/loading.gif" data-original="/d0da01c/006.png" alt="image-20230801063233335"></p>
 <ul>
 <li>进阶语法</li>
 </ul>
-<p><img src="/img/loading.gif" data-original="/007.png" alt="image-20230801063519417"></p>
+<p><img src="/img/loading.gif" data-original="/d0da01c/007.png" alt="image-20230801063519417"></p>
 <h3 id="2-负面提示词"><a href="#2-负面提示词" class="headerlink" title="(2) 负面提示词"></a>(2) 负面提示词</h3><p>提示词另外一个构成部分，是负面提示词。通俗点说，你希望这个画面里出现什么，就往正向提示词里丢，而不希望出现什么，就往反向提示词里丢。反向提示词是可以没有的，但一般我们也会选择加入一些通用的项目，主要也是基于标准化的考虑，比如：</p>
 <pre><code>NSFW, (worst quality:2) , (low quality:2), (normal quality:2) , lowres, normal quality, ((monochrome)), ((grayscale)), skin spots, acnes, skin blemishes, age spot, (ugly:1.331), (duplicate:1.331), (morbid:1.21), (mutilated:1.21), (tranny:1.331), mutated hands, (poorly drawn hands:1.5), blurry, (bad anatomy:1.21), (bad proportions:1.331), extra limbs, (disfigured:1.331), (missing arms:1.331), (extra legs:1.331), (fused fingers:1.61051), (too many fingers:1.61051), (unclear eyes:1.331), lowers, bad hands, missing fingers, (((extra arms and legs))),
 </code></pre>
