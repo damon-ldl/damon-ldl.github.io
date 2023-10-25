@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>基于启智ai创作平台的模型调用（qwen）</title>
+      <link href="//65dd884a.html"/>
+      <url>//65dd884a.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="实现效果和模型相关介绍"><a href="#实现效果和模型相关介绍" class="headerlink" title="实现效果和模型相关介绍"></a>实现效果和模型相关介绍</h1><blockquote><p><strong>通义千问-7B（Qwen-7B）</strong>是阿里云研发的通义千问大模型系列的70亿参数规模的模型。Qwen-7B是基于Transformer的大语言模型, 在超大规模的预训练数据上进行训练得到。预训练数据类型多样，覆盖广泛，包括大量网络文本、专业书籍、代码等。</p></blockquote><p>本文旨在通过启智平台完成大模型的调用，由于本地环境受限无法运行成功，可以利用启智社区平台白嫖<code>GPU</code>算力，实现效果代码，代码由<code>github</code>官方文档获得：</p><p>参考链接：<a href="https://github.com/QwenLM/Qwen/blob/main/README_CN.md">github官方文档</a></p><pre><code>from transformers import AutoModelForCausalLM, AutoTokenizerfrom transformers.generation import GenerationConfig# 可选的模型包括: &quot;Qwen/Qwen-7B&quot;, &quot;Qwen/Qwen-14B&quot;tokenizer = AutoTokenizer.from_pretrained(&quot;/code/qwen&quot;, trust_remote_code=True)# 打开bf16精度，A100、H100、RTX3060、RTX3070等显卡建议启用以节省显存# model = AutoModelForCausalLM.from_pretrained(&quot;Qwen/Qwen-7B&quot;, device_map=&quot;auto&quot;, trust_remote_code=True, bf16=True).eval()# 打开fp16精度，V100、P100、T4等显卡建议启用以节省显存# model = AutoModelForCausalLM.from_pretrained(&quot;Qwen/Qwen-7B&quot;, device_map=&quot;auto&quot;, trust_remote_code=True, fp16=True).eval()# 使用CPU进行推理，需要约32GB内存# model = AutoModelForCausalLM.from_pretrained(&quot;Qwen/Qwen-7B&quot;, device_map=&quot;cpu&quot;, trust_remote_code=True).eval()# 默认使用自动模式，根据设备自动选择精度model = AutoModelForCausalLM.from_pretrained(&quot;/code/qwen&quot;, device_map=&quot;auto&quot;, trust_remote_code=True).eval()# 可指定不同的生成长度、top_p等相关超参model.generation_config = GenerationConfig.from_pretrained(&quot;/code/qwen&quot;, trust_remote_code=True)inputs = tokenizer(&#39;蒙古国的首都是乌兰巴托（Ulaanbaatar）\n冰岛的首都是雷克雅未克（Reykjavik）\n埃塞俄比亚的首都是&#39;, return_tensors=&#39;pt&#39;)inputs = inputs.to(model.device)pred = model.generate(**inputs)print(tokenizer.decode(pred.cpu()[0], skip_special_tokens=True))# 蒙古国的首都是乌兰巴托（Ulaanbaatar）\n冰岛的首都是雷克雅未克（Reykjavik）\n埃塞俄比亚的首都是亚的斯亚贝巴（Addis Ababa）...</code></pre><p>实现效果如下：</p><p><img src="/undefined/001.png" alt="image-20231025201727087"></p><p>可以看出执行代码之后，输出会根据问题继续续写<!--（风格好像是自动推断续写而不是回答问题，我也不是很懂原因）--></p><h1 id="在启智社区创建调试任务"><a href="#在启智社区创建调试任务" class="headerlink" title="在启智社区创建调试任务"></a>在启智社区创建调试任务</h1><h2 id="登入启智社区AI创作平台"><a href="#登入启智社区AI创作平台" class="headerlink" title="登入启智社区AI创作平台"></a>登入启智社区AI创作平台</h2><p>进入启智社区，社区网址如下：<a href="https://openi.org.cn/">OpenI 启智 新一代人工智能开源开放平台</a>，</p><p><img src="/undefined/002.png" alt="image-20231025202610594"></p><p>找到ai创作平台，点击进入AI协作平台，首次登陆需要注册一下。</p><h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><p>在启智平台右上角找到创建项目</p><p><img src="/undefined/003.png" alt="image-20231025202818500"></p><p>输入项目名称后完成创建</p><h3 id="新建调试任务"><a href="#新建调试任务" class="headerlink" title="# 新建调试任务"></a># 新建调试任务</h3><p>打开新创建的项目，我这里项目名称为11111，点击云脑</p><p><img src="/undefined/004.png" alt="image-20231025203137928"></p><p>在界面里面找到新建调试任务</p><p><img src="/undefined/005.png" alt="image-20231025203301871"></p><p>基本设置如下，镜像我这里选择的是192.168.242.22:443&#x2F;default-workspace&#x2F;fccb038c23234b9e80105d4ccd152117&#x2F;image:fedjudge</p><p><img src="/undefined/006.png" alt="image-20231025203503641"></p><p>点击新建调试任务就能创建，一开始需要点击红色部分，等待状态变成running就可以进入界面了</p><p><img src="/undefined/007.png" alt="image-20231025203636184"></p><h1 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h1><p>这是点击调试之后进入的界面，界面左侧此时只有一个文件master.zip，记住左边可以显示的文件目录在code下</p><p><img src="/undefined/008.png" alt="image-20231025203934380"></p><p>进入终端输入如下命令</p><pre><code>bashcd codewget -O qwen7b.zip &#39;https://s3.openi.org.cn/opendata/attachment/d/6/d6258166-a72b-46d3-8291-0ce2f94a8f86?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=1fa9e58b6899afd26dd3%2F20231025%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20231025T124132Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment%3B%20filename%3D%22Qwen-7B.zip%22&amp;X-Amz-Signature=bedeb772c26057ba98b4268b14ddba49622940ed6c6c381e3e80d719affe98bc&#39;unzip -d qwen7b qwen7b.zip</code></pre><p>模型我这里选择的是qwen7b模型，其他大模型类似，模型网址<a href="https://openi.pcl.ac.cn/Learning-Develop-Union/LangChain-ChatGLM-Webui/datasets%EF%BC%8C%E6%A8%A1%E5%9E%8B%E7%95%8C%E9%9D%A2%E5%A6%82%E4%B8%8B%EF%BC%9A">https://openi.pcl.ac.cn/Learning-Develop-Union/LangChain-ChatGLM-Webui/datasets，模型界面如下：</a></p><p><img src="/undefined/009.png" alt="image-20231025204444795"></p><p>安心等待片刻，等左边出现文件qwen7b和qwen7b.zip说明下载解压成功</p><p><img src="/undefined/010.png" alt="image-20231025205159057"></p><p>新建一个测试文件，接着打开终端输入如下指令：</p><pre><code>bashcd codetouch text.py</code></pre><p>将代码复制到文件中，注意文件的路径为刚刚创建的路径</p><p><img src="/undefined/011.png" alt="image-20231025205831165"></p><p>然后输入代码<code>python text.py</code>执行文件， 如果遇到报错，输入下面代码</p><pre><code>pip install transformers_stream_generator</code></pre><p>输入代码后在执行python text.py之后就能实现模型的调用了</p><p><img src="/undefined/012.png" alt="image-20231025210201687"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> LLM </category>
+          
+          <category> qwen </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> qwen </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言学习(一)c语言程序结构</title>
       <link href="//a060c349.html"/>
       <url>//a060c349.html</url>
@@ -150,26 +177,7 @@
       
         <tags>
             
-            <tag> debug </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>照片</title>
-      <link href="//44276cb2.html"/>
-      <url>//44276cb2.html</url>
-      
-        <content type="html"><![CDATA[<p><img src="/44276cb2/001.png" alt="G"></p><p><img src="/44276cb2/002.png" alt="Anime 3290x1792 Honkai: Star Rail artwork Bronya Rand anime girls rifles castle Nid417 reflection cathedral interior looking at viewer standing"></p><p><img src="/44276cb2/004.jpg" alt="004"></p><p><img src="/44276cb2/003.jpg" alt="003"></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 相册 </tag>
+            <tag> errors </tag>
             
         </tags>
       
