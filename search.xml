@@ -4,11 +4,32 @@
   
     
     <entry>
+      <title>算法题(统计能整除数字的位数)</title>
+      <link href="//cbc0886d.html"/>
+      <url>//cbc0886d.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h1><p>给你一个整数 <code>num</code> ，返回 <code>num</code> 中能整除 <code>num</code> 的数位的数目。</p><p>如果满足 <code>nums % val == 0</code> ，则认为整数 <code>val</code> 可以整除 <code>nums</code> 。</p><p><strong>示例 1：</strong></p><pre><code>输入：num = 7输出：1解释：7 被自己整除，因此答案是 1 。</code></pre><p><strong>示例 2：</strong></p><pre><code>输入：num = 121输出：2解释：121 可以被 1 整除，但无法被 2 整除。由于 1 出现两次，所以返回 2 。</code></pre><p><strong>示例 3：</strong></p><pre><code>输入：num = 1248输出：4解释：1248 可以被它每一位上的数字整除，因此答案是 4 。</code></pre><p><strong>提示：</strong></p><ul><li><code>1 &lt;= num &lt;= 109</code></li><li><code>num</code> 的数位中不含 <code>0</code></li></ul><h1 id="解题方法"><a href="#解题方法" class="headerlink" title="解题方法"></a>解题方法</h1><h2 id="c语言"><a href="#c语言" class="headerlink" title="c语言"></a>c语言</h2><p>代码实现：</p><pre><code>int countDigits(int num)&#123;    int t = num, res = 0;    while(t)&#123;        if (num % (t % 10) == 0) &#123;            res += 1;        &#125;        t /=10;    &#125;    return res;&#125;</code></pre><p>代码讲解：</p><ol><li>首先，定义了两个整数变量<code>t</code>和<code>res</code>，并将它们初始化为<code>num</code>和0。其中，<code>t</code>用于存储<code>num</code>的副本，而<code>res</code>用于存储满足条件的数字的数量。</li><li>然后，使用<code>while</code>循环来迭代<code>num</code>的每一位数字。在每次迭代中，执行以下操作：<ul><li>使用取模运算符（<code>%</code>）获取<code>num</code>的最后一位数字，并将其存储在变量<code>t % 10</code>中。</li><li>检查<code>num</code>是否可以被<code>t % 10</code>整除。如果可以整除，则将<code>res</code>的值加1。</li><li>使用除法运算符（<code>/</code>）将<code>t</code>除以10，以便在下一次迭代中处理下一位数字。</li></ul></li><li>当<code>t</code>变为0时，表示已经处理完<code>num</code>的所有位数。此时，循环结束。</li><li>最后，返回变量<code>res</code>的值，即满足条件的数字的数量。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习日记 </category>
+          
+          <category> 算法题 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python爬虫之豆瓣电影top250</title>
       <link href="//cd04f754.html"/>
       <url>//cd04f754.html</url>
       
-        <content type="html"><![CDATA[<h1 id="爬虫相关思路"><a href="#爬虫相关思路" class="headerlink" title="爬虫相关思路"></a>爬虫相关思路</h1><h2 id="爬虫网站"><a href="#爬虫网站" class="headerlink" title="爬虫网站"></a>爬虫网站</h2><pre><code>https://movie.douban.com/top250 #爬虫网站，豆瓣top250</code></pre><p>进入豆瓣电影<code>top250</code>官网，右键点击属性或者按键盘上<code>f12</code>进入属性页面</p><p><img src="/undefined/image-20231026160021114.png" alt="image-20231026160021114"></p><p>按照如下步骤获取<code>Cookies</code>，<code>url</code>，<code>user-agent</code>信息，这些信息主要是模拟访问网站:</p><ul><li>找到网络并点击进入</li><li>刷新网页得到访问内容</li><li>找到<code>top250</code>进入找到相关信息</li></ul><p><img src="/undefined/image-20231026160706387.png" alt="image-20231026160706387"></p><p>将如下数据封装成一个函数</p><pre><code>def Agent_info():    &#39;&#39;&#39;用于保存Cookies，url，user-agent信息&#39;&#39;&#39;    headers = &#123;        &#39;Cookie&#39;: &#39;ll=&quot;108296&quot;; bid=ql4eVea35OE; _pk_id.100001.4cf6=eb8ccbe690de15db.1697115364.; __yadk_uid=T6v0V74NMJ2y421xzxioww6xLN6VfPe2; _vwo_uuid_v2=D79406DF4AAE71A1C157704ED368E5A95|dbc5faa35b4a745a69d2f7cd7cd153ea; __utmz=30149280.1697181931.2.2.utmcsr=douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmz=223695111.1697181931.2.2.utmcsr=douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmc=30149280; __utmc=223695111; Hm_lvt_16a14f3002af32bf3a75dfe352478639=1697250066; Hm_lpvt_16a14f3002af32bf3a75dfe352478639=1697250066; ap_v=0,6.0; __utma=30149280.1219357050.1697115357.1697249765.1697261508.7; __utmb=30149280.0.10.1697261508; __utma=223695111.682780799.1697115364.1697249765.1697261508.7; __utmb=223695111.0.10.1697261508; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1697261508%2C%22https%3A%2F%2Fwww.douban.com%2F%22%5D; _pk_ses.100001.4cf6=1; dbcl2=&quot;262712933:vV08l1yT2sw&quot;; ck=AzYJ; push_noty_num=0; push_doumail_num=0&#39;,        &#39;Host&#39;: &#39;movie.douban.com&#39;,        &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36&#39;    &#125;    return headers</code></pre><ul><li>‘Cookie’: 包含网站的Cookie信息，用于维护用户会话状态。</li><li>‘Host’: 指定请求的主机（Host）地址，用于指明请求要发送到哪个服务器。</li><li>‘User-Agent’: 包含浏览器标识信息，用于伪装请求来模拟不同的浏览器。</li></ul><p>帮助伪装成浏览器并与目标网站进行通信，以获取所需的数据。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="爬虫相关思路"><a href="#爬虫相关思路" class="headerlink" title="爬虫相关思路"></a>爬虫相关思路</h1><h2 id="爬虫网站"><a href="#爬虫网站" class="headerlink" title="爬虫网站"></a>爬虫网站</h2><pre><code>https://movie.douban.com/top250 #爬虫网站，豆瓣top250</code></pre><p>进入豆瓣电影<code>top250</code>官网，右键点击属性或者按键盘上<code>f12</code>进入属性页面</p><p><img src="/cd04f754/image-20231026160021114.png" alt="image-20231026160021114"></p><p>按照如下步骤获取<code>Cookies</code>，<code>url</code>，<code>user-agent</code>信息，这些信息主要是模拟访问网站:</p><ul><li>找到网络并点击进入</li><li>刷新网页得到访问内容</li><li>找到<code>top250</code>进入找到相关信息</li></ul><p><img src="/cd04f754/image-20231026160706387.png" alt="image-20231026160706387"></p><p>将如下数据封装成一个函数</p><pre><code>def Agent_info():    &#39;&#39;&#39;用于保存Cookies，url，user-agent信息&#39;&#39;&#39;    headers = &#123;        &#39;Cookie&#39;: &#39;ll=&quot;108296&quot;; bid=ql4eVea35OE; _pk_id.100001.4cf6=eb8ccbe690de15db.1697115364.; __yadk_uid=T6v0V74NMJ2y421xzxioww6xLN6VfPe2; _vwo_uuid_v2=D79406DF4AAE71A1C157704ED368E5A95|dbc5faa35b4a745a69d2f7cd7cd153ea; __utmz=30149280.1697181931.2.2.utmcsr=douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmz=223695111.1697181931.2.2.utmcsr=douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmc=30149280; __utmc=223695111; Hm_lvt_16a14f3002af32bf3a75dfe352478639=1697250066; Hm_lpvt_16a14f3002af32bf3a75dfe352478639=1697250066; ap_v=0,6.0; __utma=30149280.1219357050.1697115357.1697249765.1697261508.7; __utmb=30149280.0.10.1697261508; __utma=223695111.682780799.1697115364.1697249765.1697261508.7; __utmb=223695111.0.10.1697261508; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1697261508%2C%22https%3A%2F%2Fwww.douban.com%2F%22%5D; _pk_ses.100001.4cf6=1; dbcl2=&quot;262712933:vV08l1yT2sw&quot;; ck=AzYJ; push_noty_num=0; push_doumail_num=0&#39;,        &#39;Host&#39;: &#39;movie.douban.com&#39;,        &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36&#39;    &#125;    return headers</code></pre><ul><li>‘Cookie’: 包含网站的Cookie信息，用于维护用户会话状态。</li><li>‘Host’: 指定请求的主机（Host）地址，用于指明请求要发送到哪个服务器。</li><li>‘User-Agent’: 包含浏览器标识信息，用于伪装请求来模拟不同的浏览器。</li></ul><p>帮助伪装成浏览器并与目标网站进行通信，以获取所需的数据。</p>]]></content>
       
       
       <categories>
