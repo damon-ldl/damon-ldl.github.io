@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>python爬虫之豆瓣电影top250</title>
+      <link href="//cd04f754.html"/>
+      <url>//cd04f754.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="爬虫相关思路"><a href="#爬虫相关思路" class="headerlink" title="爬虫相关思路"></a>爬虫相关思路</h1><h2 id="爬虫网站"><a href="#爬虫网站" class="headerlink" title="爬虫网站"></a>爬虫网站</h2><pre><code>https://movie.douban.com/top250 #爬虫网站，豆瓣top250</code></pre><p>进入豆瓣电影<code>top250</code>官网，右键点击属性或者按键盘上<code>f12</code>进入属性页面</p><p><img src="/undefined/image-20231026160021114.png" alt="image-20231026160021114"></p><p>按照如下步骤获取<code>Cookies</code>，<code>url</code>，<code>user-agent</code>信息，这些信息主要是模拟访问网站:</p><ul><li>找到网络并点击进入</li><li>刷新网页得到访问内容</li><li>找到<code>top250</code>进入找到相关信息</li></ul><p><img src="/undefined/image-20231026160706387.png" alt="image-20231026160706387"></p><p>将如下数据封装成一个函数</p><pre><code>def Agent_info():    &#39;&#39;&#39;用于保存Cookies，url，user-agent信息&#39;&#39;&#39;    headers = &#123;        &#39;Cookie&#39;: &#39;ll=&quot;108296&quot;; bid=ql4eVea35OE; _pk_id.100001.4cf6=eb8ccbe690de15db.1697115364.; __yadk_uid=T6v0V74NMJ2y421xzxioww6xLN6VfPe2; _vwo_uuid_v2=D79406DF4AAE71A1C157704ED368E5A95|dbc5faa35b4a745a69d2f7cd7cd153ea; __utmz=30149280.1697181931.2.2.utmcsr=douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmz=223695111.1697181931.2.2.utmcsr=douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmc=30149280; __utmc=223695111; Hm_lvt_16a14f3002af32bf3a75dfe352478639=1697250066; Hm_lpvt_16a14f3002af32bf3a75dfe352478639=1697250066; ap_v=0,6.0; __utma=30149280.1219357050.1697115357.1697249765.1697261508.7; __utmb=30149280.0.10.1697261508; __utma=223695111.682780799.1697115364.1697249765.1697261508.7; __utmb=223695111.0.10.1697261508; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1697261508%2C%22https%3A%2F%2Fwww.douban.com%2F%22%5D; _pk_ses.100001.4cf6=1; dbcl2=&quot;262712933:vV08l1yT2sw&quot;; ck=AzYJ; push_noty_num=0; push_doumail_num=0&#39;,        &#39;Host&#39;: &#39;movie.douban.com&#39;,        &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36&#39;    &#125;    return headers</code></pre><ul><li>‘Cookie’: 包含网站的Cookie信息，用于维护用户会话状态。</li><li>‘Host’: 指定请求的主机（Host）地址，用于指明请求要发送到哪个服务器。</li><li>‘User-Agent’: 包含浏览器标识信息，用于伪装请求来模拟不同的浏览器。</li></ul><p>帮助伪装成浏览器并与目标网站进行通信，以获取所需的数据。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习日记 </category>
+          
+          <category> 爬虫 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 爬虫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C语言学习（二）变量和数据类型</title>
       <link href="//12dbb8fd.html"/>
       <url>//12dbb8fd.html</url>
@@ -123,7 +150,7 @@
       <link href="//9211474f.html"/>
       <url>//9211474f.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>ls 查看当前文件夹下的内容</p><p>pwd 查看当前所在文件夹</p><p>cd xx 打开当前文件中的xx文件</p><p>mkdir xx 在当前文件创建xx文件，相对路径</p><p>mkdir .&#x2F;xxx 在当前文件创建xxx文件，相对路径</p><p>mkdir &#x2F;xxx 在当前文件创建xxx文件，绝对路径</p><p>mv xxx yyy 将xxx文件改为yyy文件，重命名</p><p>cp -r &#x2F;aaa &#x2F;bbb 将&#x2F;目录下的aaa目录复制到&#x2F;bbb目录下</p><p>rmdir xx  删除目录</p><p>tree xx&#x2F;显示树状目录结构</p><p>clear 清屏</p><p>vim a.java 进入一般模式</p><p>i（按键）进入插入模式（编辑模式）</p><p>Ecs（按键）退出</p><p>：wq 保存退出（shift+：调起输入框）</p><p>：q 不保存退出</p><p>ctrl+c ，exit（）退出程序</p><p>wget linux下载安装包镜像</p>]]></content>
       
       
       
