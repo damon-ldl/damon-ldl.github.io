@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>python爬虫之豆瓣电影top250 | 世事千帆过 前方终会是温柔和月光</title><meta name="author" content="damon-ldl"><meta name="copyright" content="damon-ldl"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="爬虫相关思路爬虫网站https:&#x2F;&#x2F;movie.douban.com&#x2F;top250 #爬虫网站，豆瓣top250  进入豆瓣电影top250官网，右键点击属性或者按键盘上f12进入属性页面  按照如下步骤获取Cookies，url，user-agent信息，这些信息主要是模拟访问网站:  找到网络并点击进入 刷新网页得到访问内容 找到top250进入找到相关信息   将如下数据封装成一个函数 de">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>python爬虫之豆瓣电影top250 | 世事千帆过 前方终会是温柔和月光</title><meta name="author" content="damon-ldl"><meta name="copyright" content="damon-ldl"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="爬虫相关思路爬虫网站https:&#x2F;&#x2F;movie.douban.com&#x2F;top250 #爬虫网站，豆瓣top250 进入豆瓣电影top250官网，右键点击属性或者按键盘上f12进入属性页面  按照如下步骤获取Cookies，url，user-agent信息，这些信息主要是模拟访问网站:  找到网络并点击进入 刷新网页得到访问内容 找到top250进入找到相关信息   将如下数据封装成一个函数 def">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬虫之豆瓣电影top250">
 <meta property="og:url" content="http://example.com/cd04f754.html">
 <meta property="og:site_name" content="世事千帆过 前方终会是温柔和月光">
-<meta property="og:description" content="爬虫相关思路爬虫网站https:&#x2F;&#x2F;movie.douban.com&#x2F;top250 #爬虫网站，豆瓣top250  进入豆瓣电影top250官网，右键点击属性或者按键盘上f12进入属性页面  按照如下步骤获取Cookies，url，user-agent信息，这些信息主要是模拟访问网站:  找到网络并点击进入 刷新网页得到访问内容 找到top250进入找到相关信息   将如下数据封装成一个函数 de">
+<meta property="og:description" content="爬虫相关思路爬虫网站https:&#x2F;&#x2F;movie.douban.com&#x2F;top250 #爬虫网站，豆瓣top250 进入豆瓣电影top250官网，右键点击属性或者按键盘上f12进入属性页面  按照如下步骤获取Cookies，url，user-agent信息，这些信息主要是模拟访问网站:  找到网络并点击进入 刷新网页得到访问内容 找到top250进入找到相关信息   将如下数据封装成一个函数 def">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s2.loli.net/2023/10/26/Yu6E7DScUmJWpva.jpg">
 <meta property="article:published_time" content="2023-10-26T07:14:09.000Z">
-<meta property="article:modified_time" content="2023-10-27T09:46:56.865Z">
+<meta property="article:modified_time" content="2023-10-30T02:40:06.391Z">
 <meta property="article:author" content="damon-ldl">
 <meta property="article:tag" content="爬虫">
 <meta name="twitter:card" content="summary">
@@ -58,7 +58,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-10-27 17:46:56'
+  postUpdate: '2023-10-30 10:40:06'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -166,17 +166,16 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/2.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2023/10/26/Yu6E7DScUmJWpva.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="世事千帆过 前方终会是温柔和月光"><span class="site-name">世事千帆过 前方终会是温柔和月光</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">python爬虫之豆瓣电影top250</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-26T07:14:09.000Z" title="发表于 2023-10-26 15:14:09">2023-10-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-10-27T09:46:56.865Z" title="更新于 2023-10-27 17:46:56">2023-10-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/%E7%88%AC%E8%99%AB/">爬虫</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="python爬虫之豆瓣电影top250"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="爬虫相关思路"><a href="#爬虫相关思路" class="headerlink" title="爬虫相关思路"></a>爬虫相关思路</h1><h2 id="爬虫网站"><a href="#爬虫网站" class="headerlink" title="爬虫网站"></a>爬虫网站</h2><pre><code>https://movie.douban.com/top250 #爬虫网站，豆瓣top250
-</code></pre>
-<p>进入豆瓣电影<code>top250</code>官网，右键点击属性或者按键盘上<code>f12</code>进入属性页面</p>
-<p><img src="/img/loading.gif" data-original="/cd04f754/image-20231026160021114.png" alt="image-20231026160021114"></p>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/2.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2023/10/26/Yu6E7DScUmJWpva.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="世事千帆过 前方终会是温柔和月光"><span class="site-name">世事千帆过 前方终会是温柔和月光</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">python爬虫之豆瓣电影top250</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-26T07:14:09.000Z" title="发表于 2023-10-26 15:14:09">2023-10-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-10-30T02:40:06.391Z" title="更新于 2023-10-30 10:40:06">2023-10-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/%E7%88%AC%E8%99%AB/">爬虫</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>17分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="python爬虫之豆瓣电影top250"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="爬虫相关思路"><a href="#爬虫相关思路" class="headerlink" title="爬虫相关思路"></a>爬虫相关思路</h1><h2 id="爬虫网站"><a href="#爬虫网站" class="headerlink" title="爬虫网站"></a>爬虫网站</h2><pre><code>https://movie.douban.com/top250 #爬虫网站，豆瓣top250
+</code></pre><p>进入豆瓣电影<code>top250</code>官网，右键点击属性或者按键盘上<code>f12</code>进入属性页面</p>
+<p><img src="/img/loading.gif" data-original="/image-20231026160021114.png" alt="image-20231026160021114"></p>
 <p>按照如下步骤获取<code>Cookies</code>，<code>url</code>，<code>user-agent</code>信息，这些信息主要是模拟访问网站:</p>
 <ul>
 <li>找到网络并点击进入</li>
 <li>刷新网页得到访问内容</li>
 <li>找到<code>top250</code>进入找到相关信息</li>
 </ul>
-<p><img src="/img/loading.gif" data-original="/cd04f754/image-20231026160706387.png" alt="image-20231026160706387"></p>
+<p><img src="/img/loading.gif" data-original="/image-20231026160706387.png" alt="image-20231026160706387"></p>
 <p>将如下数据封装成一个函数</p>
 <pre><code>def Agent_info():
     &#39;&#39;&#39;用于保存Cookies，url，user-agent信息&#39;&#39;&#39;
@@ -186,8 +185,7 @@
         &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36&#39;
     &#125;
     return headers
-</code></pre>
-<ul>
+</code></pre><ul>
 <li>‘Cookie’: 包含网站的Cookie信息，用于维护用户会话状态。</li>
 <li>‘Host’: 指定请求的主机（Host）地址，用于指明请求要发送到哪个服务器。</li>
 <li>‘User-Agent’: 包含浏览器标识信息，用于伪装请求来模拟不同的浏览器。</li>
@@ -214,8 +212,7 @@ def get_url(url):
 if __name__ == &#39;__main__&#39;:
     print(&quot;开始抓取&quot;)
     get_url(&quot;https://movie.douban.com/top250&quot;)
-</code></pre>
-<p>代码效果：</p>
+</code></pre><p>代码效果：</p>
 <p><img src="/img/loading.gif" data-original="/image-20231026223327340.png" alt="image-20231026223327340"></p>
 <h3 id="BeautifulSoup美化输出内容"><a href="#BeautifulSoup美化输出内容" class="headerlink" title="BeautifulSoup美化输出内容"></a>BeautifulSoup美化输出内容</h3><p>利用<code>BeautifulSoup</code>对输出格式进行美化，<code>BeautifulSoup</code>是一个Python库，用于解析HTML或XML文件，以便于从中提取数据。它是一个强大的解析器，能够省去编写正则表达式的繁琐工作。<code>BeautifulSoup</code>支持多种解析器，包括Python标准库中的HTML解析器以及第三方解析器如<code>lxml</code>。</p>
 <p>使用<code>BeautifulSoup</code>，你可以方便地定位到HTML或XML文件中的特定标签，并从这些标签中提取出你需要的信息。此外，它提供了一些实用的功能，如查找和修改文档内容。</p>
@@ -232,17 +229,247 @@ if __name__ == &#39;__main__&#39;:
         href = x.a.get(&#39;href&#39;)
         film_urls.append(href)
     #遍历pic中的每个元素x，并从中提取href属性的值，将其添加到film_urls列表中
-    
-   
+
+
     print(film_urls)
     return film_urls
-</code></pre>
-<p><strong>代码解释</strong>：</p>
+</code></pre><p><strong>代码解释</strong>：</p>
 <p><code>href = x.a.get(&#39;href&#39;)</code> 这行代码的意思是从HTML元素 <code>x.a</code> 中获取名为 ‘href’ 的属性值，并将其赋值给变量 <code>href</code>。</p>
 <p>在这段代码中，<code>x</code> 是一个HTML元素对象，通常表示一个标签（如 <code>&lt;a&gt;</code>）。<code>x.a</code> 表示该元素的子元素 <code>&lt;a&gt;</code>。<code>get(&#39;href&#39;)</code> 是一个方法，用于获取指定属性的值。在这里，它获取的是 <code>&lt;a&gt;</code> 标签的 ‘href’ 属性值，这个值通常是一个URL链接。</p>
 <p><strong>实现效果</strong>：</p>
 <p><img src="/img/loading.gif" data-original="/image-20231026225108797.png" alt="image-20231026225108797"></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">damon-ldl</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/cd04f754.html">http://example.com/cd04f754.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">世事千帆过 前方终会是温柔和月光</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/10/26/Yu6E7DScUmJWpva.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/cbc0886d.html" title="算法题(统计能整除数字的位数)"><img class="cover" src="/img/loading.gif" data-original="https://s2.loli.net/2023/10/26/JhZkfLYW53ep976.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">算法题(统计能整除数字的位数)</div></div></a></div><div class="next-post pull-right"><a href="/12dbb8fd.html" title="C语言程序（二）变量和数据类型"><img class="cover" src="/img/loading.gif" data-original="https://s2.loli.net/2023/10/26/gMTxqh17SmJXcKv.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">C语言程序（二）变量和数据类型</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">damon-ldl</div><div class="author-info__description">华理研一菜鸟学习ing</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/damon-ldl"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">网站持续更新中！！！  crtl+d保存不迷路</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E6%80%9D%E8%B7%AF"><span class="toc-number">1.</span> <span class="toc-text">爬虫相关思路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%BD%91%E7%AB%99"><span class="toc-number">1.1.</span> <span class="toc-text">爬虫网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E5%8F%96%E7%BD%91%E7%AB%99%E7%BD%91%E9%A1%B5%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.</span> <span class="toc-text">爬取网站网页代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E6%8A%93%E5%8F%96%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.1.</span> <span class="toc-text">直接抓取代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BeautifulSoup%E7%BE%8E%E5%8C%96%E8%BE%93%E5%87%BA%E5%86%85%E5%AE%B9"><span class="toc-number">1.2.2.</span> <span class="toc-text">BeautifulSoup美化输出内容</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/e92a798c.html" title="C语言程序（三）判断与循环">C语言程序（三）判断与循环</a><time datetime="2023-10-29T02:51:09.000Z" title="发表于 2023-10-29 10:51:09">2023-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/cbc0886d.html" title="算法题(统计能整除数字的位数)"><img src="/img/loading.gif" data-original="https://s2.loli.net/2023/10/26/JhZkfLYW53ep976.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="算法题(统计能整除数字的位数)"/></a><div class="content"><a class="title" href="/cbc0886d.html" title="算法题(统计能整除数字的位数)">算法题(统计能整除数字的位数)</a><time datetime="2023-10-26T09:23:52.000Z" title="发表于 2023-10-26 17:23:52">2023-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/cd04f754.html" title="python爬虫之豆瓣电影top250"><img src="/img/loading.gif" data-original="https://s2.loli.net/2023/10/26/Yu6E7DScUmJWpva.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python爬虫之豆瓣电影top250"/></a><div class="content"><a class="title" href="/cd04f754.html" title="python爬虫之豆瓣电影top250">python爬虫之豆瓣电影top250</a><time datetime="2023-10-26T07:14:09.000Z" title="发表于 2023-10-26 15:14:09">2023-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/12dbb8fd.html" title="C语言程序（二）变量和数据类型"><img src="/img/loading.gif" data-original="https://s2.loli.net/2023/10/26/gMTxqh17SmJXcKv.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C语言程序（二）变量和数据类型"/></a><div class="content"><a class="title" href="/12dbb8fd.html" title="C语言程序（二）变量和数据类型">C语言程序（二）变量和数据类型</a><time datetime="2023-10-26T02:45:29.000Z" title="发表于 2023-10-26 10:45:29">2023-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/65dd884a.html" title="基于启智ai创作平台的模型调用（qwen）"><img src="/img/loading.gif" data-original="https://s2.loli.net/2023/10/25/v4Oz3R2pC5x1coi.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于启智ai创作平台的模型调用（qwen）"/></a><div class="content"><a class="title" href="/65dd884a.html" title="基于启智ai创作平台的模型调用（qwen）">基于启智ai创作平台的模型调用（qwen）</a><time datetime="2023-10-25T12:01:25.000Z" title="发表于 2023-10-25 20:01:25">2023-10-25</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s2.loli.net/2023/10/26/Yu6E7DScUmJWpva.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By damon-ldl</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>#樱花<canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div>
+<h2 id="抓取网页电影名称和电影地址"><a href="#抓取网页电影名称和电影地址" class="headerlink" title="抓取网页电影名称和电影地址"></a>抓取网页电影名称和电影地址</h2><p>实现代码:</p>
+<pre><code>def get_url(url):
+    print(&quot;抓取网址：&quot;, url)  # 打印正在抓取的网址
+    headers = Agent_info()  # 获取请求头信息
+    request = requests.get(url, headers=headers)  # 发送GET请求，携带请求头信息
+    soup = BeautifulSoup(request.text, &#39;lxml&#39;)  # 使用BeautifulSoup解析网页内容
+    pic = soup.find_all(attrs=&#123;&#39;class&#39;: &#39;pic&#39;&#125;)  # 查找所有具有&#39;class&#39;: &#39;pic&#39;属性的元素
+    film_urls = []  # 电影详情地址列表
+    for x in pic:
+        href = x.a.get(&#39;href&#39;)  # 获取每个元素的a标签中的href属性值
+        film_urls.append(href)  # 将href属性值添加到电影详情地址列表中
+    movie_list = []  # 外国电影名字列表
+    div_list = soup.find_all(attrs=&#123;&#39;class&#39;: &#39;hd&#39;&#125;)  # 查找所有具有&#39;class&#39;: &#39;hd&#39;属性的元素
+    for each in div_list:
+        movie = each.a.contents[3].text.strip()  # 获取每个元素的a标签中的第三个子元素的文本内容，并去除首尾空格
+        movie = movie[2:]  # 从第三个字符开始取值
+        movie_list.append(movie)  # 将取到的值添加到外国电影名字列表中
+
+    return film_urls, movie_list  # 返回电影详情地址列表和外国电影名字列表
+</code></pre><h2 id="获取电影信息"><a href="#获取电影信息" class="headerlink" title="获取电影信息"></a>获取电影信息</h2><pre><code>def get_url_info(film_url, film_name_en, id):
+    print(&quot;抓取网址:&quot;, film_url)
+    headers = Agent_info()
+    request = requests.get(film_url, headers=headers)
+    soup = BeautifulSoup(request.text, &#39;lxml&#39;)
+    # 排名
+    ranks = soup.find(attrs=&#123;&#39;class&#39;: &#39;top250-no&#39;&#125;).text.split(&#39;.&#39;)[1]
+    # 电影名
+    film_name = soup.find(attrs=&#123;&quot;property&quot;: &quot;v:itemreviewed&quot;&#125;).text.split(&#39; &#39;)[0]
+    # 导演
+    director = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[1].split(&#39;:&#39;)[1].strip()
+    # 编剧
+    scriptwriter = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[2].split(&#39;:&#39;)[1].strip()
+    # 主演
+    actor = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[3].split(&#39;:&#39;)[1].strip()
+    # 类型
+    filmtype = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[4].split(&#39;:&#39;)[1].strip()
+    types = filmtype.split(&quot;/&quot;)
+
+    if soup.find(attrs=&#123;&#39;id&#39;:&#39;info&#39;&#125;).text.split(&#39;\n&#39;)[5].split(&#39;:&#39;)[0] == &#39;官方网站&#39;:
+        # 国家或者地区
+        area = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[6].split(&#39;:&#39;)[1].strip()
+        # 语言
+        language = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[7].split(&#39;:&#39;)[1].strip()
+        # 上映日期
+        initialreleasedate = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[8].split(&#39;:&#39;)[1].strip().split(&quot;(&quot;)[0]
+
+    else:
+        # 国家或者地区
+        area = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[5].split(&#39;:&#39;)[1].strip()
+        # 语言
+        language = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[6].split(&#39;:&#39;)[1].strip()
+        # 上映日期
+        initialreleasedate = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[7].split(&#39;:&#39;)[1].strip().split(&quot;(&quot;)[0]
+    # 片长
+    # runtime = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[8].split(&#39;:&#39;)[1].strip()
+    runtime = soup.find(attrs=&#123;&#39;property&#39;: &#39;v:runtime&#39;&#125;).text
+    # 豆瓣评分
+    rating_num = soup.find(attrs=&#123;&#39;property&#39;: &quot;v:average&quot;&#125;).text
+    # 五星评分比例
+    star5_rating_per = soup.find(attrs=&#123;&#39;class&#39;: &#39;rating_per&#39;&#125;).text
+    # 评价人数
+    rating_people = soup.find(attrs=&#123;&#39;property&#39;: &#39;v:votes&#39;&#125;).text
+    # 剧情简介
+    summary = soup.find(attrs=&#123;&#39;property&#39;: &#39;v:summary&#39;&#125;).text
+    summary = pymysql.converters.escape_string(summary)
+</code></pre><h1 id="mysql相关内容"><a href="#mysql相关内容" class="headerlink" title="mysql相关内容"></a>mysql相关内容</h1><h2 id="在软件新建二个表格"><a href="#在软件新建二个表格" class="headerlink" title="在软件新建二个表格"></a>在软件新建二个表格</h2><p>新建二个表格用于存储爬虫的内容，一个储存电影链接和电影名称，一个存储电影详细信息</p>
+<p>表一：</p>
+<p><img src="/img/loading.gif" data-original="/image-20231030095505729.png" alt="image-20231030095505729"></p>
+<p>表二：</p>
+<p><img src="/img/loading.gif" data-original="/image-20231030095539194.png" alt="image-20231030095539194"></p>
+<h2 id="python与数据库的连接"><a href="#python与数据库的连接" class="headerlink" title="python与数据库的连接"></a>python与数据库的连接</h2><h3 id="获取数据库链接"><a href="#获取数据库链接" class="headerlink" title="获取数据库链接"></a>获取数据库链接</h3><pre><code>import pymysql
+
+def getDB():
+    # 连接数据库
+    db = pymysql.connect(host=&#39;localhost&#39;, user=&#39;root&#39;, password=&#39;123456&#39;, database=&#39;douban&#39;)
+    return db
+</code></pre><pre><code> sql = &#39;insert into movies(film_name,director,scriptwriter,actor,filmtype,area,language,initialreleasedate,ranks,runtime,rating_num,star5_rating_per,rating_people,summary,film_name_en,links) value (&quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;);&#39;.format(
+        film_name, director, scriptwriter, actor, filmtype, area, language, initialreleasedate, ranks, runtime,
+        rating_num, star5_rating_per, rating_people, summary, film_name_en, film_url)
+    db = getDB()
+
+    try:
+        cursor = db.cursor()
+        cursor.execute(sql)
+        cursor.execute(&#39;insert into moviehash(movieid) values(&quot;&#123;&#125;&quot;)&#39;.format(id))
+        for j in range(len(types)):
+            cursor.execute(&#39;insert into movietype(movieid,filmtype) values(&quot;&#123;&#125;&quot;,&quot;&#123;&#125;&quot;)&#39;.format(id,types[j].strip()))
+
+        db.commit()
+    except Exception as e:
+        print(&quot;错误：&quot;, e)
+        db.rollback()
+    cursor.close()
+    db.close()
+</code></pre><h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><pre><code>import pymysql
+import re
+import requests
+from bs4 import BeautifulSoup
+
+
+# 获取豆瓣top50 加入split会转换为数组方式
+def getDB():
+    # 连接数据库
+    db = pymysql.connect(host=&#39;localhost&#39;, user=&#39;root&#39;, password=&#39;123456&#39;, database=&#39;douban&#39;)
+    return db
+
+
+def Agent_info():
+    &#39;&#39;&#39;用于保存Cookies，url，user-agent信息&#39;&#39;&#39;
+    headers = &#123;
+        &#39;Cookie&#39;: &#39;ll=&quot;108296&quot;; bid=ql4eVea35OE; _pk_id.100001.4cf6=eb8ccbe690de15db.1697115364.; __yadk_uid=T6v0V74NMJ2y421xzxioww6xLN6VfPe2; _vwo_uuid_v2=D79406DF4AAE71A1C157704ED368E5A95|dbc5faa35b4a745a69d2f7cd7cd153ea; __utmz=30149280.1697181931.2.2.utmcsr=douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmz=223695111.1697181931.2.2.utmcsr=douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; __utmc=30149280; __utmc=223695111; Hm_lvt_16a14f3002af32bf3a75dfe352478639=1697250066; Hm_lpvt_16a14f3002af32bf3a75dfe352478639=1697250066; ap_v=0,6.0; __utma=30149280.1219357050.1697115357.1697249765.1697261508.7; __utmb=30149280.0.10.1697261508; __utma=223695111.682780799.1697115364.1697249765.1697261508.7; __utmb=223695111.0.10.1697261508; _pk_ref.100001.4cf6=%5B%22%22%2C%22%22%2C1697261508%2C%22https%3A%2F%2Fwww.douban.com%2F%22%5D; _pk_ses.100001.4cf6=1; dbcl2=&quot;262712933:vV08l1yT2sw&quot;; ck=AzYJ; push_noty_num=0; push_doumail_num=0&#39;,
+        &#39;Host&#39;: &#39;movie.douban.com&#39;,
+        &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36&#39;
+    &#125;
+    return headers
+
+
+def get_url(url):
+    print(&quot;抓取网址:&quot;, url)
+    headers = Agent_info()
+    request = requests.get(url, headers=headers)
+    soup = BeautifulSoup(request.text, &#39;lxml&#39;)
+    pic = soup.find_all(attrs=&#123;&#39;class&#39;: &#39;pic&#39;&#125;)
+    film_urls = []  # 电影详情地址列表
+    for x in pic:
+        href = x.a.get(&#39;href&#39;)
+        film_urls.append(href)
+    movie_list = []  # 外国电影名字
+    div_list = soup.find_all(attrs=&#123;&#39;class&#39;: &#39;hd&#39;&#125;)
+    for each in div_list:
+        movie = each.a.contents[3].text.strip() #取第三部分内容去掉空格
+        movie = movie[2:] #从第三个数开始取值
+        movie_list.append(movie)
+
+    return film_urls, movie_list
+
+
+# 获取电影信息
+def get_url_info(film_url, film_name_en, id):
+    print(&quot;抓取网址:&quot;, film_url)
+    headers = Agent_info()
+    request = requests.get(film_url, headers=headers)
+    soup = BeautifulSoup(request.text, &#39;lxml&#39;)
+    # 排名
+    ranks = soup.find(attrs=&#123;&#39;class&#39;: &#39;top250-no&#39;&#125;).text.split(&#39;.&#39;)[1]
+    # 电影名
+    film_name = soup.find(attrs=&#123;&quot;property&quot;: &quot;v:itemreviewed&quot;&#125;).text.split(&#39; &#39;)[0]
+    # 导演
+    director = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[1].split(&#39;:&#39;)[1].strip()
+    # 编剧
+    scriptwriter = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[2].split(&#39;:&#39;)[1].strip()
+    # 主演
+    actor = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[3].split(&#39;:&#39;)[1].strip()
+    # 类型
+    filmtype = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[4].split(&#39;:&#39;)[1].strip()
+    types = filmtype.split(&quot;/&quot;)
+
+    if soup.find(attrs=&#123;&#39;id&#39;:&#39;info&#39;&#125;).text.split(&#39;\n&#39;)[5].split(&#39;:&#39;)[0] == &#39;官方网站&#39;:
+        # 国家或者地区
+        area = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[6].split(&#39;:&#39;)[1].strip()
+        # 语言
+        language = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[7].split(&#39;:&#39;)[1].strip()
+        # 上映日期
+        initialreleasedate = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[8].split(&#39;:&#39;)[1].strip().split(&quot;(&quot;)[0]
+
+    else:
+        # 国家或者地区
+        area = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[5].split(&#39;:&#39;)[1].strip()
+        # 语言
+        language = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[6].split(&#39;:&#39;)[1].strip()
+        # 上映日期
+        initialreleasedate = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[7].split(&#39;:&#39;)[1].strip().split(&quot;(&quot;)[0]
+    # 片长
+    # runtime = soup.find(attrs=&#123;&#39;id&#39;: &#39;info&#39;&#125;).text.split(&#39;\n&#39;)[8].split(&#39;:&#39;)[1].strip()
+    runtime = soup.find(attrs=&#123;&#39;property&#39;: &#39;v:runtime&#39;&#125;).text
+    # 豆瓣评分
+    rating_num = soup.find(attrs=&#123;&#39;property&#39;: &quot;v:average&quot;&#125;).text
+    # 五星评分比例
+    star5_rating_per = soup.find(attrs=&#123;&#39;class&#39;: &#39;rating_per&#39;&#125;).text
+    # 评价人数
+    rating_people = soup.find(attrs=&#123;&#39;property&#39;: &#39;v:votes&#39;&#125;).text
+    # 剧情简介
+    summary = soup.find(attrs=&#123;&#39;property&#39;: &#39;v:summary&#39;&#125;).text
+    summary = pymysql.converters.escape_string(summary)
+
+    # 存到数据库
+    # sql = &#39;insert into movies(film_name,director,scriptwriter,actor,filmtype,area,language,initialreleasedate,ranks,runtime,rating_num,star5_rating_per,rating_people,summary,film_name_en,links) value (&quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;);&#39;.format(film_name, director, scriptwriter, actor, filmtype, area, language, initialreleasedate, ranks, runtime,rating_num, star5_rating_per, rating_people, summary, film_name_en, film_url)
+    #
+    # db = getDB()
+    # try:
+    #     cursor = db.cursor()
+    #     cursor.execute(sql)
+    #     db.commit()
+    # except Exception as e:
+    #     db.rollback()
+    # cursor.close()
+    # db.close()
+    sql = &#39;insert into movies(film_name,director,scriptwriter,actor,filmtype,area,language,initialreleasedate,ranks,runtime,rating_num,star5_rating_per,rating_people,summary,film_name_en,links) value (&quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;, &quot;&#123;&#125;&quot;);&#39;.format(
+        film_name, director, scriptwriter, actor, filmtype, area, language, initialreleasedate, ranks, runtime,
+        rating_num, star5_rating_per, rating_people, summary, film_name_en, film_url)
+    db = getDB()
+
+    try:
+        cursor = db.cursor()
+        cursor.execute(sql)
+        cursor.execute(&#39;insert into moviehash(movieid) values(&quot;&#123;&#125;&quot;)&#39;.format(id))
+        for j in range(len(types)):
+            cursor.execute(&#39;insert into movietype(movieid,filmtype) values(&quot;&#123;&#125;&quot;,&quot;&#123;&#125;&quot;)&#39;.format(id,types[j].strip()))
+
+        db.commit()
+    except Exception as e:
+        print(&quot;错误：&quot;, e)
+        db.rollback()
+    cursor.close()
+    db.close()
+
+
+if __name__ == &#39;__main__&#39;:
+    print(&quot;开始抓取&quot;)
+    film_urls, movie_list = get_url(&quot;https://movie.douban.com/top250&quot;)
+    db = getDB()
+    cursor = db.cursor()
+    for i in range(0, 250, 25):
+        film_urls, movie_list = get_url(&quot;https://movie.douban.com/top250?start=&quot; + str(i) + &quot;&amp;filter=&quot;)
+        for film_url in range(len(film_urls)):
+            id = re.search(&#39;\d\d+&#39;, film_urls[film_url]).group()
+            sql = &#39;select movieid from moviehash where movieid=&quot;&#123;&#125;&quot;;&#39;.format(id)
+            cursor.execute(sql)
+            data = cursor.fetchall()
+            if not data:
+                get_url_info(film_urls[film_url], movie_list[film_url], id)
+</code></pre></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">damon-ldl</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/cd04f754.html">http://example.com/cd04f754.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">世事千帆过 前方终会是温柔和月光</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/10/26/Yu6E7DScUmJWpva.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/cbc0886d.html" title="算法题(统计能整除数字的位数)"><img class="cover" src="/img/loading.gif" data-original="https://s2.loli.net/2023/10/26/JhZkfLYW53ep976.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">算法题(统计能整除数字的位数)</div></div></a></div><div class="next-post pull-right"><a href="/12dbb8fd.html" title="C语言程序（二）变量和数据类型"><img class="cover" src="/img/loading.gif" data-original="https://s2.loli.net/2023/10/26/gMTxqh17SmJXcKv.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">C语言程序（二）变量和数据类型</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">damon-ldl</div><div class="author-info__description">华理研一菜鸟学习ing</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">23</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/damon-ldl"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">网站持续更新中！！！  crtl+d保存不迷路</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%9B%B8%E5%85%B3%E6%80%9D%E8%B7%AF"><span class="toc-number">1.</span> <span class="toc-text">爬虫相关思路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%BD%91%E7%AB%99"><span class="toc-number">1.1.</span> <span class="toc-text">爬虫网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E5%8F%96%E7%BD%91%E7%AB%99%E7%BD%91%E9%A1%B5%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.</span> <span class="toc-text">爬取网站网页代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E6%8A%93%E5%8F%96%E4%BB%A3%E7%A0%81"><span class="toc-number">1.2.1.</span> <span class="toc-text">直接抓取代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BeautifulSoup%E7%BE%8E%E5%8C%96%E8%BE%93%E5%87%BA%E5%86%85%E5%AE%B9"><span class="toc-number">1.2.2.</span> <span class="toc-text">BeautifulSoup美化输出内容</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%93%E5%8F%96%E7%BD%91%E9%A1%B5%E7%94%B5%E5%BD%B1%E5%90%8D%E7%A7%B0%E5%92%8C%E7%94%B5%E5%BD%B1%E5%9C%B0%E5%9D%80"><span class="toc-number">1.3.</span> <span class="toc-text">抓取网页电影名称和电影地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E7%94%B5%E5%BD%B1%E4%BF%A1%E6%81%AF"><span class="toc-number">1.4.</span> <span class="toc-text">获取电影信息</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mysql%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9"><span class="toc-number">2.</span> <span class="toc-text">mysql相关内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E8%BD%AF%E4%BB%B6%E6%96%B0%E5%BB%BA%E4%BA%8C%E4%B8%AA%E8%A1%A8%E6%A0%BC"><span class="toc-number">2.1.</span> <span class="toc-text">在软件新建二个表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.2.</span> <span class="toc-text">python与数据库的连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93%E9%93%BE%E6%8E%A5"><span class="toc-number">2.2.1.</span> <span class="toc-text">获取数据库链接</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">完整代码</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/0.html" title="无题">无题</a><time datetime="2024-02-25T09:02:22.115Z" title="发表于 2024-02-25 17:02:22">2024-02-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/39d974b0.html" title="c语言总复习"><img src="/img/loading.gif" data-original="https://s2.loli.net/2023/11/13/Y7p4jlywknmIVAN.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="c语言总复习"/></a><div class="content"><a class="title" href="/39d974b0.html" title="c语言总复习">c语言总复习</a><time datetime="2023-11-13T13:00:43.000Z" title="发表于 2023-11-13 21:00:43">2023-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/91987568.html" title="c#学习日志1"><img src="/img/loading.gif" data-original="https://s2.loli.net/2023/11/10/Zf6Gas5xFN7ApJe.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="c#学习日志1"/></a><div class="content"><a class="title" href="/91987568.html" title="c#学习日志1">c#学习日志1</a><time datetime="2023-11-10T08:17:36.000Z" title="发表于 2023-11-10 16:17:36">2023-11-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/36c70eb9.html" title="flask">flask</a><time datetime="2023-10-31T09:21:36.000Z" title="发表于 2023-10-31 17:21:36">2023-10-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/e92a798c.html" title="C语言程序（三）判断与循环">C语言程序（三）判断与循环</a><time datetime="2023-10-29T02:51:09.000Z" title="发表于 2023-10-29 10:51:09">2023-10-29</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s2.loli.net/2023/10/26/Yu6E7DScUmJWpva.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By damon-ldl</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>#樱花<canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div>
         <style>
             [bg-lazy] {
                 background-image: none !important;
