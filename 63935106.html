@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>研究课题论文（一） | 世事千帆过 前方终会是温柔和月光</title><meta name="author" content="damon-ldl"><meta name="copyright" content="damon-ldl"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、理论基础1、名词解释(1)、模型预测控制MPCMPC的核心在于它能够在每个控制周期内，通过优化算法预测系统在未来一段时间内的行为，并根据这个预测来确定当前的控制动作。这个过程是重复进行的，因此MPC是一种闭环控制方法。 MPC是一种先进的控制策略，它基于当前系统的状态和一个数学模型预测未来的行为。在每个采样时刻，MPC计算出在未来一段有限时间内的最优输入序列（即控制动作），这个序列将使得目标函">
+<meta property="og:type" content="article">
+<meta property="og:title" content="研究课题论文（一）">
+<meta property="og:url" content="http://example.com/63935106.html">
+<meta property="og:site_name" content="世事千帆过 前方终会是温柔和月光">
+<meta property="og:description" content="一、理论基础1、名词解释(1)、模型预测控制MPCMPC的核心在于它能够在每个控制周期内，通过优化算法预测系统在未来一段时间内的行为，并根据这个预测来确定当前的控制动作。这个过程是重复进行的，因此MPC是一种闭环控制方法。 MPC是一种先进的控制策略，它基于当前系统的状态和一个数学模型预测未来的行为。在每个采样时刻，MPC计算出在未来一段有限时间内的最优输入序列（即控制动作），这个序列将使得目标函">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/07/19/4UD3naFKAipWhtM.png">
+<meta property="article:published_time" content="2024-07-19T05:44:20.000Z">
+<meta property="article:modified_time" content="2024-07-19T12:40:20.806Z">
+<meta property="article:author" content="damon-ldl">
+<meta property="article:tag" content="电力系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/07/19/4UD3naFKAipWhtM.png"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="http://example.com/63935106.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '研究课题论文（一）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-19 20:40:20'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><div class="aplayer" data-id="4968103795" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="auto"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lete114/CDN/music/APlayer/APlayer.min.css"><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/music/APlayer/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/2.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2024/07/19/4UD3naFKAipWhtM.png')"><nav id="nav"><span id="blog-info"><a href="/" title="世事千帆过 前方终会是温柔和月光"><span class="site-name">世事千帆过 前方终会是温柔和月光</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">研究课题论文（一）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-19T05:44:20.000Z" title="发表于 2024-07-19 13:44:20">2024-07-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-19T12:40:20.806Z" title="更新于 2024-07-19 20:40:20">2024-07-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%BA%E6%96%87/">论文</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AE%BA%E6%96%87/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F/">电力系统</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="研究课题论文（一）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一、理论基础"><a href="#一、理论基础" class="headerlink" title="一、理论基础"></a>一、理论基础</h1><h2 id="1、名词解释"><a href="#1、名词解释" class="headerlink" title="1、名词解释"></a>1、名词解释</h2><h3 id="1-、模型预测控制MPC"><a href="#1-、模型预测控制MPC" class="headerlink" title="(1)、模型预测控制MPC"></a>(1)、模型预测控制MPC</h3><p>MPC的核心在于它能够在每个控制周期内，通过优化算法预测系统在未来一段时间内的行为，并根据这个预测来确定当前的控制动作。这个过程是重复进行的，因此MPC是一种闭环控制方法。 MPC是一种先进的控制策略，它基于当前系统的状态和一个数学模型预测未来的行为。在每个采样时刻，MPC计算出在未来一段有限时间内的最优输入序列（即控制动作），这个序列将使得目标函数（例如成本函数）最小化，同时保证系统动态满足一系列的约束条件。然后，实际应用的是这个最优序列的第一个控制输入，而在下一个采样时刻，控制器会重新计算一个新的优化序列，从而形成了一种滚动优化的过程。</p>
+<p>MPC工作流程：</p>
+<p><strong>系统建模：</strong>首先，需要为被控系统建立一个动态模型。这个模型应该能够准确地描述系统的动态行为，包括状态转移和控制输入对状态的影响。</p>
+<p><strong>预测：</strong>使用当前的系统状态和控制输入，通过模型预测系统未来的状态。这通常涉及到求解模型的动态方程，得到未来一段时间内的状态轨迹。</p>
+<p><strong>优化：</strong>定义一个优化问题，目标是在预测时域内优化某个性能指标（如总成本、总能耗等）。优化问题的约束条件可能包括系统状态约束、控制输入约束等。</p>
+<p><strong>求解：</strong>使用优化算法求解这个有限时间的最优控制问题，得到最优控制序列。</p>
+<p><strong>应用：</strong>将最优控制序列的第一个控制动作应用于系统。</p>
+<p><strong>反馈校正：</strong>在下一个时刻，测量系统的实际状态，并更新内部模型。然后，重复上述步骤，进行新一轮的预测、优化和控制。</p>
+<h3 id="2-、-DRO分布式鲁棒优化"><a href="#2-、-DRO分布式鲁棒优化" class="headerlink" title="(2)、 DRO分布式鲁棒优化"></a>(2)、 DRO分布式鲁棒优化</h3><p><strong>分布鲁棒优化（Distributionally Robust Optimization, DRO）：</strong> DRO是一种应对不确定性优化问题的方法，其核心是设计一种优化方案，使之在一组可能的概率分布（即ambiguity set）中对最坏情况下的性能有所保证。这意味着即使真实的概率分布未知或者只能通过有限数据得到近似，DRO仍然能够提供具有稳健性的决策结果。</p>
+<h3 id="3-、DRMPC"><a href="#3-、DRMPC" class="headerlink" title="(3)、DRMPC"></a>(3)、DRMPC</h3><p><strong>分布鲁棒模型预测控制（Distributionally Robust Model Predictive Control, DRMPC）</strong></p>
+<p> DRMPC则是将DRO的思想融入到MPC框架内，针对非线性系统，在存在不确定性的情况下进行优化。在这种方法中，不仅考虑了系统模型的不确定性，还为系统中的随机变量引入了概率约束。DRMPC的目标是在面对不确定性时找到一个更为稳健的最优控制策略，即使模型与真实系统行为之间存在失配，也能确保系统在一定概率水平下满足所有约束条件并优化长期性能。通过这种方式，DRMPC旨在改进传统MPC在处理不确定性时可能出现的次优性问题，增强控制系统在复杂和变化环境中的适应能力和安全性。</p>
+<p><strong>1.模型描述与不确定性设定：</strong></p>
+<p>首先，建立一个反映系统动态特性的数学模型，并识别出其中的不确定性来源。</p>
+<p>使用 Wasserstein 距离或其他度量方式来定义一个不确定性集，该集围绕着经验分布或者基于有限样本数据估计的“参考”分布形成一个半径为 γ 的球体。</p>
+<p><strong>2.优化问题形式化：</strong></p>
+<p>设定一个滚动优化窗口，在每个采样时刻 k，考虑未来的 T 步时间步长内的控制序列和状态预测。</p>
+<p>目标函数通常是期望性能指标的最小化或在最坏情况下最大化，同时满足概率约束条件。</p>
+<p>概率约束通常表示为分布鲁棒型约束，例如条件风险价值（Conditional Value-at-Risk, CVaR）或其它能够表达对不确定性容忍程度的统计指标。</p>
+<p><strong>3.鲁棒优化问题求解：</strong></p>
+<p>优化问题被表述为在不确定性集合中找到一组控制器输入变量，使得无论实际的概率分布如何（只要落在所定义的不确定性集合内），都能保证某些性能指标不超过某个阈值。</p>
+<p>这需要解决一个带有双重优化结构的问题，即在外层优化中寻找最坏情况下的分布，而在内层优化中计算给定分布下的最优控制输入。</p>
+<p><strong>4.实施与滚动更新：</strong></p>
+<p>实际应用时，仅执行优化得到的当前最优控制动作，然后根据新的系统状态信息和不确定性估计，在下一个采样时刻重新进行优化过程。</p>
+<p><strong>5.Lagrange乘数法与对偶理论：</strong></p>
+<p>为了有效地求解这个复杂的分布鲁棒优化问题，经常利用拉格朗日乘数法将原问题转化为对偶问题，并结合强对偶性原理和范数理论进行转换和简化。</p>
+<h3 id="4-、实际案例描述"><a href="#4-、实际案例描述" class="headerlink" title="(4)、实际案例描述"></a>(4)、实际案例描述</h3><p>例子：假设我们正在设计一个智能能源管理系统，用于优化一座风力发电厂的运行策略。系统的目标是在保证电网稳定性和满足供电需求的前提下，尽可能提高风能利用效率并减少化石能源的补充使用。</p>
+<p><strong>传统模型预测控制（MPC）应用：</strong> 在传统的MPC框架下，我们会基于当前和预测的风速、电力需求以及其他相关参数建立风电系统的动态模型。每个时间步长内，MPC计算最优的风机转速或功率调节序列以最小化某种成本函数（比如化石燃料消耗与未充分利用风能的成本之和）。然而，由于风速具有较强的随机性和不确定性，实际风速可能偏离预测值，导致MPC制定的策略在实际执行时效果未必最佳。</p>
+<p><strong>分布鲁棒模型预测控制（DRMPC）应用：</strong> 而在DRMPC中，我们将考虑未来风速的概率分布集合而非单一预测值。例如，我们可以构造一个基于历史数据的Wasserstein不确定性集来包含所有可能的风速分布。然后，在求解优化问题时，DRMPC会在这个不确定性集中寻找最坏情况下的风速分布，并据此确定一组稳健的风机控制策略，使得即使在最不利的风速条件下，也能确保电网稳定性、满足供需平衡，并最大程度地降低额外成本。</p>
+<p>因此，相比于传统MPC，DRMPC更注重在不确定性环境中的稳健性，能够在有限的数据支持下提供一种概率意义上的性能保证，从而提升整个风力发电系统的运营效率和可靠性。</p>
+<p>Rl+mpc例子<strong>工业过程控制优化</strong> 在某些工业自动化场景中，例如化工生产、电力系统或机器人运动控制，传统的MPC能够基于精确的物理模型对系统未来状态进行预测，并据此计算出满足约束条件的最佳控制序列。然而，实际系统的动态特性可能受到诸多不确定因素的影响，导致模型存在误差。在这种情况下，可以将RL引入到MPC框架中。比如，通过设计一个参数化的MPC控制器，其中包含一些可调整的参数（如模型中的增益矩阵、预测时域长度等）。然后，RL算法可以在闭环运行中实时学习这些参数，以最小化某种性能指标（如控制误差、能耗或其他成本函数），从而提高整体控制效果。</p>
+<h1 id="二、理论基础"><a href="#二、理论基础" class="headerlink" title="二、理论基础"></a>二、理论基础</h1><h2 id="1、安全强化学习"><a href="#1、安全强化学习" class="headerlink" title="1、安全强化学习"></a>1、安全强化学习</h2><p>1.非线性离散随机动力系统：<br>$$<br>s_{k+1}&#x3D;f(s_k,a_k,w_k)<br>$$</p>
+<blockquote>
+<p><strong>假设1</strong>：扰动集W做出凸性和闭合性的假设（凸性保证了优化问题的局部解就是全局解。）</p>
+</blockquote>
+<p>假设目的：将DRO重新表述为有限凸规划</p>
+<p>2.最优安全策略</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719151203595.png" alt="image-20240719151203595"></p>
+<p>我们要找到一个策略 𝜋∗，它在平均意义上（考虑到所有可能的初始状态）最小化了从初始状态开始的预期累积回报（价值函数），输出状态s遵循状态分布的平均值。</p>
+<p>3.价值函数</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719151655767.png" alt="image-20240719151655767"></p>
+<p>（3a)价值函数Vπ是一个映射，它把状态空间X映射到实数R，关联于策略π。它定义了从初始状态s0出发，遵循策略π时的期望回报。（从开始到结束，优化问题，优化参数）</p>
+<p>（3b) 动力学约束</p>
+<p>（3c) 条件概率约束(安全约束)</p>
+<p>4.安全集合</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719152703620.png" alt="image-20240719152703620"></p>
+<p>对应任意状态s映射到函数h(s）的函数值需要小于0，引入安全集合后3c可以转换成</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719152921151.png" alt="image-20240719152921151"></p>
+<p>Sk是任意状态</p>
+<blockquote>
+<p><strong>假设2</strong>:每个函数−hj是固有的、凸的和下半连续的函数。(有点取值有限,局部最小为全局最小,无跳转)</p>
+</blockquote>
+<h2 id="2-SMPC理论推导过程"><a href="#2-SMPC理论推导过程" class="headerlink" title="2.SMPC理论推导过程"></a>2.SMPC理论推导过程</h2><p>1.参数向量化策略,改写(2),Z找到最优参数向量,构成最优策略</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719160219389.png" alt="image-20240719160219389"></p>
+<p>2.一个基于参数化模型预测控制（MPC）的优化问题，目标是找到一组最优输入序列a和状态序列s来最小化期望成本，并同时满足系统动态、概率约束以及初始状态条件。问题(3)转换:</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719160443365.png" alt="image-20240719160443365"></p>
+<p>约束条件:</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719161752747.png"></p>
+<blockquote>
+<p>求解第k步的优化问题,优化变量a和s,</p>
+<p>通过求解这个优化问题，我们得到一个最优的控制序列 <em>a</em>，它将指导系统在考虑未来 <em>I</em> 个时间点的预测状态和成本的同时，从当前状态 <em>sk</em> 开始，最小化期望的总成本，同时满足所有约束条件。在实际应用中，这个优化问题通常在每个时间步 <em>k</em> 都会重新求解，以反映最新的状态信息和环境变化，这被称为滚动地平线优化或再调度。</p>
+</blockquote>
+<p>3.参数化策略πθ在时间实例k处的定义如下</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719162431717.png" alt="image-20240719162431717"></p>
+<blockquote>
+<p>整个决策过程包含的一系列参数化决策</p>
+</blockquote>
+<p>4.机会约束转换</p>
+<p> VaRα定义如下</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719163125880.png" alt="image-20240719163125880"></p>
+<blockquote>
+<p>VaR实际上代表了发生概率至少为 α的最坏损失。</p>
+</blockquote>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719163355027.png" alt="image-20240719163355027"></p>
+<p>非凸转换成凸求解</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719164109511.png" alt="image-20240719164109511"></p>
+<p>当α趋于1时，CVaR与VaR之间的差距趋于零</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719164152853.png" alt="image-20240719164152853"></p>
+<p>转换后优化问题</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719164235641.png" alt="image-20240719164235641"></p>
+<p>求解cvara:</p>
+<ul>
+<li><p>考虑Ns种场景描述,其中第m次场景表达</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719165046464.png" alt="image-20240719165046464"></p>
+</li>
+<li><p>引入辅助变量求解Cvara</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719165206981.png" alt="image-20240719165206981"></p>
+<p>5.SMPC最终表达式</p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719165256487.png" alt="image-20240719165256487"></p>
+<p><img src="/img/loading.gif" data-original="/Users\cassi\AppData\Roaming\Typora\typora-user-images\image-20240719165305754.png" alt="image-20240719165305754"></p>
+</li>
+</ul>
+<h1 id="三、目标函数构建"><a href="#三、目标函数构建" class="headerlink" title="三、目标函数构建"></a>三、目标函数构建</h1><h2 id="1-目标函数定义"><a href="#1-目标函数定义" class="headerlink" title="1.目标函数定义"></a>1.目标函数定义</h2><p> 目标函数旨在最小化智能电动汽车充电站（Electric Vehicle Charging Station, EVCS）的运营成本，同时确保满足电动汽车（Electric Vehicle, EV）用户的充电需求，并考虑到电力购买&#x2F;销售价格、光伏（Photovoltaic, PV）发电输出和未来EV充电需求的不确定性。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">damon-ldl</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/63935106.html">http://example.com/63935106.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">世事千帆过 前方终会是温柔和月光</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F/">电力系统</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2024/07/19/4UD3naFKAipWhtM.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/1319ac05.html" title="react后台管理项目（一）"><img class="cover" src="/img/loading.gif" data-original="https://s2.loli.net/2024/07/18/LYQhVjGTokwsKix.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">react后台管理项目（一）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">damon-ldl</div><div class="author-info__description">华理研一菜鸟学习ing</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/damon-ldl"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/qq_52700183?spm=1000.2115.3001.5343" target="_blank" title="CSDN"><i class="fa fa-book-open"></i></a><a class="social-icon" href="mailto:cassielldl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope-open-text"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">网站持续更新中！！！  crtl+d保存不迷路</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="toc-text">一、理论基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A"><span class="toc-text">1、名词解释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%81%E6%A8%A1%E5%9E%8B%E9%A2%84%E6%B5%8B%E6%8E%A7%E5%88%B6MPC"><span class="toc-text">(1)、模型预测控制MPC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81-DRO%E5%88%86%E5%B8%83%E5%BC%8F%E9%B2%81%E6%A3%92%E4%BC%98%E5%8C%96"><span class="toc-text">(2)、 DRO分布式鲁棒优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E3%80%81DRMPC"><span class="toc-text">(3)、DRMPC</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E3%80%81%E5%AE%9E%E9%99%85%E6%A1%88%E4%BE%8B%E6%8F%8F%E8%BF%B0"><span class="toc-text">(4)、实际案例描述</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80"><span class="toc-text">二、理论基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E5%85%A8%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0"><span class="toc-text">1、安全强化学习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-SMPC%E7%90%86%E8%AE%BA%E6%8E%A8%E5%AF%BC%E8%BF%87%E7%A8%8B"><span class="toc-text">2.SMPC理论推导过程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%E6%9E%84%E5%BB%BA"><span class="toc-text">三、目标函数构建</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9B%AE%E6%A0%87%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="toc-text">1.目标函数定义</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/63935106.html" title="研究课题论文（一）"><img src="/img/loading.gif" data-original="https://s2.loli.net/2024/07/19/4UD3naFKAipWhtM.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="研究课题论文（一）"/></a><div class="content"><a class="title" href="/63935106.html" title="研究课题论文（一）">研究课题论文（一）</a><time datetime="2024-07-19T05:44:20.000Z" title="发表于 2024-07-19 13:44:20">2024-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/1319ac05.html" title="react后台管理项目（一）"><img src="/img/loading.gif" data-original="https://s2.loli.net/2024/07/18/LYQhVjGTokwsKix.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="react后台管理项目（一）"/></a><div class="content"><a class="title" href="/1319ac05.html" title="react后台管理项目（一）">react后台管理项目（一）</a><time datetime="2024-07-18T13:15:49.000Z" title="发表于 2024-07-18 21:15:49">2024-07-18</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s2.loli.net/2024/07/19/4UD3naFKAipWhtM.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By damon-ldl</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>#樱花<canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body></html>
