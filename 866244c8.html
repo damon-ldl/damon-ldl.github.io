@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>书生大模型闯关记录（第1关 Linux 基础知识） | 世事千帆过 前方终会是温柔和月光</title><meta name="author" content="damon-ldl"><meta name="copyright" content="damon-ldl"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、开发环境介绍1、创建开发机（1)、登录InternStudio平台创建环境1、登录https:&#x2F;&#x2F;studio.intern-ai.org.cn&#x2F;网站，打开首页，创建开发机  2、填写相关配置信息创建开发机  3、等待开发机创建完成，如图所示  4、进入开发机，页面显示如图  二、实现端口映射1、SSH连接实现1、找到开发机&gt;SSH连接，点击进入  2、复制连接的登录命令和密码  3.W">
+<meta property="og:type" content="article">
+<meta property="og:title" content="书生大模型闯关记录（第1关 Linux 基础知识）">
+<meta property="og:url" content="http://example.com/866244c8.html">
+<meta property="og:site_name" content="世事千帆过 前方终会是温柔和月光">
+<meta property="og:description" content="一、开发环境介绍1、创建开发机（1)、登录InternStudio平台创建环境1、登录https:&#x2F;&#x2F;studio.intern-ai.org.cn&#x2F;网站，打开首页，创建开发机  2、填写相关配置信息创建开发机  3、等待开发机创建完成，如图所示  4、进入开发机，页面显示如图  二、实现端口映射1、SSH连接实现1、找到开发机&gt;SSH连接，点击进入  2、复制连接的登录命令和密码  3.W">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/07/22/GwN6VJcsIAd1Bay.png">
+<meta property="article:published_time" content="2024-07-22T04:00:34.000Z">
+<meta property="article:modified_time" content="2024-07-22T04:12:51.717Z">
+<meta property="article:author" content="damon-ldl">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/07/22/GwN6VJcsIAd1Bay.png"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="http://example.com/866244c8.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: false,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '书生大模型闯关记录（第1关 Linux 基础知识）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-22 12:12:51'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><div class="aplayer" data-id="4968103795" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="auto"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lete114/CDN/music/APlayer/APlayer.min.css"><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/music/APlayer/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/2.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2024/07/22/jwrEvWGq8MId2Rp.png')"><nav id="nav"><span id="blog-info"><a href="/" title="世事千帆过 前方终会是温柔和月光"><span class="site-name">世事千帆过 前方终会是温柔和月光</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">书生大模型闯关记录（第1关 Linux 基础知识）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-22T04:00:34.000Z" title="发表于 2024-07-22 12:00:34">2024-07-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-22T04:12:51.717Z" title="更新于 2024-07-22 12:12:51">2024-07-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%90%8E%E7%AB%AF/llm/">llm</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%90%8E%E7%AB%AF/llm/internlm%E8%AE%AD%E7%BB%83%E8%90%A5/">internlm训练营</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">601</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="书生大模型闯关记录（第1关 Linux 基础知识）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一、开发环境介绍"><a href="#一、开发环境介绍" class="headerlink" title="一、开发环境介绍"></a>一、开发环境介绍</h1><h2 id="1、创建开发机"><a href="#1、创建开发机" class="headerlink" title="1、创建开发机"></a>1、创建开发机</h2><h2 id="（1-、登录InternStudio平台创建环境"><a href="#（1-、登录InternStudio平台创建环境" class="headerlink" title="（1)、登录InternStudio平台创建环境"></a>（1)、登录InternStudio平台创建环境</h2><p>1、登录<a target="_blank" rel="noopener" href="https://studio.intern-ai.org.cn/网站，打开首页，创建开发机">https://studio.intern-ai.org.cn/网站，打开首页，创建开发机</a></p>
+<p><img src="/img/loading.gif" data-original="/1.png" alt="image-20240721233024132"></p>
+<p>2、填写相关配置信息创建开发机</p>
+<p><img src="/img/loading.gif" data-original="/2.png" alt="image-20240721233101796"></p>
+<p>3、等待开发机创建完成，如图所示</p>
+<p><img src="/img/loading.gif" data-original="/3.png" alt="image-20240721233140288"></p>
+<p>4、进入开发机，页面显示如图</p>
+<p><img src="/img/loading.gif" data-original="/4.png" alt="image-20240721233322349"></p>
+<h1 id="二、实现端口映射"><a href="#二、实现端口映射" class="headerlink" title="二、实现端口映射"></a>二、实现端口映射</h1><h2 id="1、SSH连接实现"><a href="#1、SSH连接实现" class="headerlink" title="1、SSH连接实现"></a>1、SSH连接实现</h2><p>1、找到开发机&gt;SSH连接，点击进入</p>
+<p><img src="/img/loading.gif" data-original="/5.png" alt="image-20240721233640917"></p>
+<p>2、复制连接的登录命令和密码</p>
+<p><img src="/img/loading.gif" data-original="/6.png" alt="image-20240721233734525"></p>
+<p>3.Windows打开终端命令行，将登入命令复制到命令行，出现下面框框表示连接成功</p>
+<blockquote>
+<p>这里我windows提前配置的SSH KEY所以没有登录密码验证，如果出现密码验证复制上面的密码即可</p>
+</blockquote>
+<p><img src="/img/loading.gif" data-original="/7.png" alt="image-20240721233817120"></p>
+<p>4、对应功能测试，可以在命令行输入命令测试</p>
+<p><img src="/img/loading.gif" data-original="/8.png" alt="image-20240721234105097"></p>
+<h2 id="2、vscode连接实现"><a href="#2、vscode连接实现" class="headerlink" title="2、vscode连接实现"></a>2、vscode连接实现</h2><h3 id="（1）、安装远程连接插件Remote-ssh"><a href="#（1）、安装远程连接插件Remote-ssh" class="headerlink" title="（1）、安装远程连接插件Remote -ssh"></a>（1）、安装远程连接插件Remote -ssh</h3><p><img src="/img/loading.gif" data-original="/9.png" alt="image-20240721234321518"></p>
+<h3 id="2-、点击加号添加开发机SSH连接的登录命令"><a href="#2-、点击加号添加开发机SSH连接的登录命令" class="headerlink" title="(2)、点击加号添加开发机SSH连接的登录命令"></a>(2)、点击加号添加开发机SSH连接的登录命令</h3><p>1、复制上面的SSH连接的登录命令</p>
+<p><img src="/img/loading.gif" data-original="/10.png" alt="image-20240721234511521"></p>
+<p>2、出现提示</p>
+<p><img src="/img/loading.gif" data-original="/11.png" alt="image-20240721234615319"></p>
+<p>表示已经连接成功</p>
+<p>3、选择Linux</p>
+<p><img src="/img/loading.gif" data-original="/12.png" alt="image-20240721234654983"></p>
+<p>如果出现</p>
+<p><img src="/img/loading.gif" data-original="/13.png" alt="image-20240721234914435"></p>
+<p>可能需要终止原来的连接（windows命令行执行exit，exit两次）</p>
+<p>4、出现开发机的根目录</p>
+<p><img src="/img/loading.gif" data-original="/14.png" alt="image-20240721234752861"></p>
+<p>此时</p>
+<p><img src="/img/loading.gif" data-original="/15.png" alt="image-20240721234828273"></p>
+<h2 id="三、使用端口映射实现本地访问helloworld-py"><a href="#三、使用端口映射实现本地访问helloworld-py" class="headerlink" title="三、使用端口映射实现本地访问helloworld.py"></a>三、使用端口映射实现本地访问helloworld.py</h2><h2 id="1、新建一个py文件"><a href="#1、新建一个py文件" class="headerlink" title="1、新建一个py文件"></a>1、新建一个py文件</h2><p>在root新建一个helloworld.py文件，代码如下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> gradio <span class="keyword">as</span> gr</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 获取主机名</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_hostname</span>():</span><br><span class="line">    hostname = socket.gethostname()</span><br><span class="line">    <span class="keyword">match</span> = re.search(<span class="string">r&#x27;-(\d+)$&#x27;</span>, hostname)</span><br><span class="line">    name = <span class="keyword">match</span>.group(<span class="number">1</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> name</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 创建 Gradio 界面</span></span><br><span class="line"><span class="keyword">with</span> gr.Blocks(gr.themes.Soft()) <span class="keyword">as</span> demo:</span><br><span class="line">    html_code = <span class="string">f&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">            &lt;p align=&quot;center&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;a href=&quot;https://intern-ai.org.cn/home&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;img src=&quot;https://intern-ai.org.cn/assets/headerLogo-4ea34f23.svg&quot; alt=&quot;Logo&quot; width=&quot;20%&quot; style=&quot;border-radius: 5px;&quot;&gt;</span></span><br><span class="line"><span class="string">            &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/p&gt;</span></span><br><span class="line"><span class="string">            &lt;h1 style=&quot;text-align: center;&quot;&gt;☁️ Welcome <span class="subst">&#123;get_hostname()&#125;</span> user, welcome to the ShuSheng LLM Practical Camp Course!&lt;/h1&gt;</span></span><br><span class="line"><span class="string">            &lt;h2 style=&quot;text-align: center;&quot;&gt;😀 Let’s go on a journey through ShuSheng Island together.&lt;/h2&gt;</span></span><br><span class="line"><span class="string">            &lt;p align=&quot;center&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;a href=&quot;https://github.com/InternLM/Tutorial/blob/camp3&quot;&gt;</span></span><br><span class="line"><span class="string">                    &lt;img src=&quot;https://oss.lingkongstudy.com.cn/blog/202406301604074.jpg&quot; alt=&quot;Logo&quot; width=&quot;20%&quot; style=&quot;border-radius: 5px;&quot;&gt;</span></span><br><span class="line"><span class="string">                &lt;/a&gt;</span></span><br><span class="line"><span class="string">            &lt;/p&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">            &quot;&quot;&quot;</span></span><br><span class="line">    gr.Markdown(html_code)</span><br><span class="line"></span><br><span class="line">demo.launch()</span><br></pre></td></tr></table></figure>
+<h2 id="2、使用端口映射"><a href="#2、使用端口映射" class="headerlink" title="2、使用端口映射"></a>2、使用端口映射</h2><p>1、windows连接开发机</p>
+<p><img src="/img/loading.gif" data-original="/16.png" alt="image-20240721235413175"></p>
+<p>2.运行代码，需要先安装gradio库，<code>pip install gradio=4.29.0</code>后运行<code>python helloworld.py</code></p>
+<p><img src="/img/loading.gif" data-original="/17.png" alt="image-20240721235553735"></p>
+<p>3、打开网页即可访问</p>
+<p><img src="/img/loading.gif" data-original="/18.png" alt="image-20240721235447077"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">damon-ldl</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/866244c8.html">http://example.com/866244c8.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">世事千帆过 前方终会是温柔和月光</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/linux/">linux</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2024/07/22/GwN6VJcsIAd1Bay.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/3abd4025.html" title="爬虫项目豆瓣top250可视化（一）"><img class="cover" src="/img/loading.gif" data-original="https://s2.loli.net/2024/07/19/lgbdoOWkLQ69TMp.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">爬虫项目豆瓣top250可视化（一）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">damon-ldl</div><div class="author-info__description">华理研一菜鸟学习ing</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/damon-ldl"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/qq_52700183?spm=1000.2115.3001.5343" target="_blank" title="CSDN"><i class="fa fa-book-open"></i></a><a class="social-icon" href="mailto:cassielldl@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope-open-text"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">网站持续更新中！！！  crtl+d保存不迷路</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%BB%8B%E7%BB%8D"><span class="toc-text">一、开发环境介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BA%E5%BC%80%E5%8F%91%E6%9C%BA"><span class="toc-text">1、创建开发机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BC%881-%E3%80%81%E7%99%BB%E5%BD%95InternStudio%E5%B9%B3%E5%8F%B0%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83"><span class="toc-text">（1)、登录InternStudio平台创建环境</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%9E%E7%8E%B0%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84"><span class="toc-text">二、实现端口映射</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81SSH%E8%BF%9E%E6%8E%A5%E5%AE%9E%E7%8E%B0"><span class="toc-text">1、SSH连接实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81vscode%E8%BF%9E%E6%8E%A5%E5%AE%9E%E7%8E%B0"><span class="toc-text">2、vscode连接实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%881%EF%BC%89%E3%80%81%E5%AE%89%E8%A3%85%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E6%8F%92%E4%BB%B6Remote-ssh"><span class="toc-text">（1）、安装远程连接插件Remote -ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E3%80%81%E7%82%B9%E5%87%BB%E5%8A%A0%E5%8F%B7%E6%B7%BB%E5%8A%A0%E5%BC%80%E5%8F%91%E6%9C%BASSH%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%99%BB%E5%BD%95%E5%91%BD%E4%BB%A4"><span class="toc-text">(2)、点击加号添加开发机SSH连接的登录命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84%E5%AE%9E%E7%8E%B0%E6%9C%AC%E5%9C%B0%E8%AE%BF%E9%97%AEhelloworld-py"><span class="toc-text">三、使用端口映射实现本地访问helloworld.py</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AApy%E6%96%87%E4%BB%B6"><span class="toc-text">1、新建一个py文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84"><span class="toc-text">2、使用端口映射</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/866244c8.html" title="书生大模型闯关记录（第1关 Linux 基础知识）"><img src="/img/loading.gif" data-original="https://s2.loli.net/2024/07/22/GwN6VJcsIAd1Bay.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="书生大模型闯关记录（第1关 Linux 基础知识）"/></a><div class="content"><a class="title" href="/866244c8.html" title="书生大模型闯关记录（第1关 Linux 基础知识）">书生大模型闯关记录（第1关 Linux 基础知识）</a><time datetime="2024-07-22T04:00:34.000Z" title="发表于 2024-07-22 12:00:34">2024-07-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/3abd4025.html" title="爬虫项目豆瓣top250可视化（一）"><img src="/img/loading.gif" data-original="https://s2.loli.net/2024/07/19/lgbdoOWkLQ69TMp.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="爬虫项目豆瓣top250可视化（一）"/></a><div class="content"><a class="title" href="/3abd4025.html" title="爬虫项目豆瓣top250可视化（一）">爬虫项目豆瓣top250可视化（一）</a><time datetime="2024-07-19T15:31:45.000Z" title="发表于 2024-07-19 23:31:45">2024-07-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/1319ac05.html" title="react后台管理项目（一）"><img src="/img/loading.gif" data-original="https://s2.loli.net/2024/07/18/LYQhVjGTokwsKix.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="react后台管理项目（一）"/></a><div class="content"><a class="title" href="/1319ac05.html" title="react后台管理项目（一）">react后台管理项目（一）</a><time datetime="2024-07-18T13:15:04.000Z" title="发表于 2024-07-18 21:15:04">2024-07-18</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s2.loli.net/2024/07/22/jwrEvWGq8MId2Rp.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By damon-ldl</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/sakura.js"></script>#樱花<canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body></html>
